@@ -1,0 +1,34 @@
+.sidebar {
+	grid-area: app-sidebar;
+	background-color: var(--default-bg-color);
+	overflow-y: hidden;
+}
+.sidebar-list {
+	list-style: none;
+	padding: 5px;
+	overflow: scroll;
+	scrollbar-width: thin;
+	overflow-x: hidden;
+	height: 100%;
+	&::-webkit-scrollbar {
+		width: 5px;
+	}
+}
+.sidebar-list-item a {
+	text-decoration: none;
+	font-weight: lighter;
+	font-size: 18px;
+	color: whitesmoke;
+	display: inline-block;
+	padding: 10px;
+	text-align: left;
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 2.5px;
+	border-radius: 10px;
+
+}

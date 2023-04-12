@@ -1,0 +1,16 @@
+@use './components/shared/global';
+@use './components/shared/variables';
+@use './components/shared/navbar';
+@use './components/shared/sidebar';
+
+.container {
+	height: 100%;
+	display: grid;
+	grid-gap: 5px;
+	grid-template-areas: 
+		"app-navbar app-navbar"
+		"app-preview app-sidebar"
+	;
+	grid-template-rows: 75px 1fr;
+	grid-template-columns: 1fr 250px;
+}
