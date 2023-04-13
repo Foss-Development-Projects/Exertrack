@@ -5,9 +5,11 @@
 	border-radius: 10px;
 	padding: 10px;
 	width: 250px;
+	max-width: 250px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;justify-content: space-between;
+	transition: width, padding, 100ms ease-in;
 }
 .hide-sidebar {
 	width: 0;
@@ -50,9 +52,9 @@
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	margin-bottom: 5px;
 	border-radius: 10px;
 	transition: background-color, color, 100ms ease-in-out;
+	margin-bottom: 5px;
 	&:hover {
 		background-color: var(--default-fg-color)!important;
 		color: var(--default-bg-color)!important;
@@ -73,11 +75,13 @@
 	display: flex;
 	background-color: rgba(60, 60, 60, 0.7);
 	padding: 10px;
-	margin-bottom: 5px;
 	flex-direction: row-reverse;
 	align-items: center;
 	justify-content: space-between;
 	border-radius: 10px;
+	&:nth-child(1) {
+		margin-bottom: 5px;
+	}
 	img {
 		width: 45px;
 		height: 45px;
@@ -90,11 +94,21 @@
 		font-size: 16px;
 		font-family: "Roboto", sans-serif;
 	}
-}.box {
+}
+.box {
 	width: 50px;
 	height: 25px;
-	background-color: red;
+	background-color: rgba(0,0,0,0.35);
 	border-radius: 20px;
+}
+
+@media (max-width: 800px) {
+	.sidebar {
+		height: calc(100% - 90px);
+		position: absolute;
+		top: 85px;
+		right: 5px;
+	}
 }
 
 @media (max-width: 400px) {

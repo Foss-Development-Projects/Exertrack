@@ -1,4 +1,3 @@
-import { useRef } from 'preact/hooks';
 import Navbar from "../shared/Navbar"
 import Preview from "../shared/Preview"
 import Sidebar from "../shared/Sidebar"

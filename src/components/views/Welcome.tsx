@@ -1,7 +1,8 @@
+import EveningBG from './../../assets/images/evening.jpg';
 const Welcome = () => {
 	return(
-		<div>
-			<h1>Welcome View</h1>
+		<div className="welcome" style={{ backgroundImage: `url('${EveningBG}')` }}>
+			<h2 className="welcome-header">Good Evening, Foster</h2>
 		</div>
 	)
 }

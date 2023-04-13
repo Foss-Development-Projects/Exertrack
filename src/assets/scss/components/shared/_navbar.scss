@@ -28,7 +28,7 @@
 .navbar-toggle-button {
 	background: none;
 	outline: none;
-	display: flex;
+	display: none;
 	align-items: center;
 	justify-content: center;
 	padding: 10px;
@@ -40,4 +40,8 @@
 		box-shadow: 0 0 5px var(--default-fg-color);
 		transition: box-shadow, 100ms ease-in-out;
 	}
+}
+
+@media (max-width: 800px) {
+	.navbar-toggle-button {display: flex;}
 }

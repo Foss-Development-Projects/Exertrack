@@ -6,6 +6,9 @@ import { MdFitnessCenter, MdSearch } from 'react-icons/md';
 import { SiWelcometothejungle } from 'react-icons/si';
 import { BiLogOutCircle, BiInfoCircle } from 'react-icons/bi';
 
+import ThemeSwitch from '../modules/ThemeSwitch';
+import { useEffect } from 'preact/hooks';
+
 const sidebarRoutes: Array<Object> = [
 	{ name: "Welcome", path: "/", icon: SiWelcometothejungle },
 	{ name: "Account", path: "/account", icon: VscAccount },
@@ -15,10 +18,26 @@ const sidebarRoutes: Array<Object> = [
 	{ name: "Logout", path: "/logout", icon: BiLogOutCircle },
 	{ name: "About", path: "/about", icon: BiInfoCircle },
 ]
-
 const Sidebar = () => {
+	const sidebar: any = document.getElementById("sidebar")
+	window.onload = () => {
+		if(window.innerWidth < 800) {
+			sidebar.classList.add("hide-sidebar")
+		}
+		else {
+			sidebar.classList.remove("hide-sidebar")
+		}
+	}
+	window.onresize = () => {
+		if(window.innerWidth < 800) {
+			sidebar.classList.add("hide-sidebar")
+		}
+		else {
+			sidebar.classList.remove("hide-sidebar")
+		}
+	}
 	return(
-		<nav className="sidebar">
+		<nav className="sidebar" id="sidebar">
 			<ul className="sidebar-list">
 			{sidebarRoutes.map((item: any) => {
 				return(
@@ -33,7 +52,7 @@ const Sidebar = () => {
 			</ul>
 			<ul className="sidebar-profile">
 				<li className="sidebar-profile-item">
-					<div className="box"></div>
+					<ThemeSwitch id="theme-switch" name="theme-switch" />
 					<p className="sidebar-profile-item-detail">Appearance</p>
 				</li>
 				<li className="sidebar-profile-item">
