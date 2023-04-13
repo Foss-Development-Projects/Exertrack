@@ -3,6 +3,10 @@
 	background-color: var(--default-bg-color);
 	color: var(--default-fg-color);
 	padding: 15px 10px;
+	display: flex;
+	align-items: center;
+	border-radius: 10px;
+	justify-content: space-between;
 }
 .navbar-header {
 	display: flex;
@@ -20,4 +24,20 @@
 	font-weight: lighter;
 	font-family: "Montserrat Alternates", sans-serif;
 
+}
+.navbar-toggle-button {
+	background: none;
+	outline: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	cursor: pointer;
+	border-radius: 50%;
+	border: 1px solid var(--default-fg-color);
+	transition: box-shadow, 100ms ease-in-out;
+	&:hover {
+		box-shadow: 0 0 5px var(--default-fg-color);
+		transition: box-shadow, 100ms ease-in-out;
+	}
 }

@@ -2,7 +2,7 @@
 @use './components/shared/variables';
 @use './components/shared/navbar';
 @use './components/shared/sidebar';
-
+@use './components/shared/preview';
 .container {
 	height: 100%;
 	display: grid;
