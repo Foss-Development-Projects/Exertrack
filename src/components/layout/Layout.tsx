@@ -5,7 +5,11 @@ import Sidebar from "../shared/Sidebar"
 
 const Layout = () => {
       return(
-            <h1>WOrks</h1>
+            <div className="container">
+                  <Navbar />
+                  <Sidebar />
+                  <Preview />
+                </div>
       )
 }
 export default Layout;

@@ -50,8 +50,15 @@
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	margin-bottom: 2.5px;
+	margin-bottom: 5px;
 	border-radius: 10px;
+	transition: background-color, color, 100ms ease-in-out;
+	&:hover {
+		background-color: var(--default-fg-color)!important;
+		color: var(--default-bg-color)!important;
+		font-weight: bold!important;
+		transition: background-color, color, 100ms ease-in-out;
+	}
 	p {
 		margin-left: 5px;
 		font-family: "Open Sans", sans-serif;
@@ -60,11 +67,13 @@
 
 .sidebar-profile {
  width: 100%;
+ padding-top: 10px;
 }
 .sidebar-profile-item {
 	display: flex;
 	background-color: rgba(60, 60, 60, 0.7);
 	padding: 10px;
+	margin-bottom: 5px;
 	flex-direction: row-reverse;
 	align-items: center;
 	justify-content: space-between;
@@ -81,6 +90,11 @@
 		font-size: 16px;
 		font-family: "Roboto", sans-serif;
 	}
+}.box {
+	width: 50px;
+	height: 25px;
+	background-color: red;
+	border-radius: 20px;
 }
 
 @media (max-width: 400px) {

@@ -3,15 +3,17 @@ import ProfileLogo from './../../assets/images/sample.webp';
 
 import { VscAccount, VscSettings } from 'react-icons/vsc';
 import { MdFitnessCenter, MdSearch } from 'react-icons/md';
-
-import { BiLogOutCircle } from 'react-icons/bi';
+import { SiWelcometothejungle } from 'react-icons/si';
+import { BiLogOutCircle, BiInfoCircle } from 'react-icons/bi';
 
 const sidebarRoutes: Array<Object> = [
-	{ id: 1, name: "Account", path: "/account", icon: VscAccount },
-	{ id: 2, name: "Settings", path: "/settings", icon: VscSettings },
-	{ id: 3, name: "Workouts", path: "/workouts", icon: MdFitnessCenter },
-	{ id: 4, name: "Search", path: "/about", icon: MdSearch },
-	{ id: 5, name: "Logout", path: "/logout", icon: BiLogOutCircle },
+	{ name: "Welcome", path: "/", icon: SiWelcometothejungle },
+	{ name: "Account", path: "/account", icon: VscAccount },
+	{ name: "Settings", path: "/settings", icon: VscSettings },
+	{ name: "Workouts", path: "/workouts", icon: MdFitnessCenter },
+	{ name: "Search", path: "/search", icon: MdSearch },
+	{ name: "Logout", path: "/logout", icon: BiLogOutCircle },
+	{ name: "About", path: "/about", icon: BiInfoCircle },
 ]
 
 const Sidebar = () => {
@@ -21,7 +23,7 @@ const Sidebar = () => {
 			{sidebarRoutes.map((item: any) => {
 				return(
 					<li key={item.id} className="sidebar-list-item">
-						<Link href={item.path} activeClassName='active-sidebar-link'>
+						<Link href={`/user${item.path}`} activeClassName='active-sidebar-link'>
 							<item.icon size={24} />
 							<p className="sidebar-list-item-title">{item.name}</p>
 						</Link>
@@ -30,6 +32,10 @@ const Sidebar = () => {
 			})}
 			</ul>
 			<ul className="sidebar-profile">
+				<li className="sidebar-profile-item">
+					<div className="box"></div>
+					<p className="sidebar-profile-item-detail">Appearance</p>
+				</li>
 				<li className="sidebar-profile-item">
 					<img src={ProfileLogo} alt="User Profile Picture" loading="lazy" />
 					<article className="sidebar-profile-item-detail">
