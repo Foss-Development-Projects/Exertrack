@@ -1,0 +1,36 @@
+.home {
+	min-height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-color: var(--default-bg-color);
+}
+.home-title-section {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	height: 500px;
+
+	.home-title {
+		margin-top: 100px;
+		font-size: 36px;
+		font-family: "Montserrat Alternates", sans-serif;
+		color: var(--default-fg-color);
+	}
+}
+.features {
+	width: 100%;
+	display: grid;
+	padding: 10px;
+	align-items: center;
+	justify-content: space-between;
+	grid-gap: 10px;
+	grid-template-columns: repeat(2, 150px);
+}
+.feature-box {
+	max-width: 150px;
+	min-height: 125px;
+	background-color: darkred;
+	border-radius: 10px;
+}

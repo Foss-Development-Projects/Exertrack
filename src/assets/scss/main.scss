@@ -3,6 +3,8 @@
 @use './components/shared/navbar';
 @use './components/shared/sidebar';
 @use './components/shared/preview';
+
+@use './components/views/home';
 .container {
 	height: 100%;
 	display: grid;
