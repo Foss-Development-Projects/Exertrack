@@ -1,3 +1,5 @@
+@use './../helpers/mixins' as mix;
+
 .navbar {
 	grid-area: app-navbar;
 	background-color: var(--default-bg-color);
@@ -7,25 +9,11 @@
 	align-items: center;
 	border-radius: 10px;
 	justify-content: space-between;
+	@include mix.site-logo("navbar");
 }
-.navbar-header {
-	display: flex;
-	align-items: center;
-	text-decoration: none;
-	color: inherit;
-}
-.navbar-header-logo {
-	max-width: 45px;
-	max-height: 45px;
-}
-.navbar-header-title {
 
-	font-size: 30px;
-	font-weight: lighter;
-	font-family: "Montserrat Alternates", sans-serif;
-
-}
 .navbar-toggle-button {
+	color: var(--default-fg-color);
 	background: none;
 	outline: none;
 	display: none;

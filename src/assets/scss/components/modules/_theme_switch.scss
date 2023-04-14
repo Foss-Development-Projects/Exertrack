@@ -7,7 +7,7 @@
     --theme-switch-transition-duration: 400ms;
     --theme-switch-box-shadow-color-light: 0 0 10px var(--default-bg-color);
     --theme-switch-box-shadow-color-dark: 0 0 10px var(--default-fg-color);
-    --theme-switch-slide-width: 18px;
+    --theme-switch-slide-width: 16px;
     --theme-switch-slide-icon-light: '\f185';
     --theme-switch-slide-icon-dark: '\f186';
     --theme-switch-slide-icon-color-light:var(--default-bg-color);
@@ -57,7 +57,7 @@
     var(--theme-switch-transition-type);
     transform: translate(-100%, -50%);
     content: var(--theme-switch-slide-icon-light);
-    font-size:1.3em;
+    font-size:1.2em;
     font-family: "FontAwesome";
     border-radius: 50%;
     width: var(--theme-switch-slide-width);

@@ -18,7 +18,7 @@ const Navbar = (props: any) => {
 				<h1 className="navbar-header-title">Exertrack</h1>
 			</a>
 			<button className="navbar-toggle-button" onClick={toggleSidebar}>
-				<BsReverseLayoutSidebarReverse size={24} color='whitesmoke' />
+				<BsReverseLayoutSidebarReverse size={24} />
 			</button>
 		</nav>
 	)
