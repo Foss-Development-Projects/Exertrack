@@ -2,11 +2,14 @@ import { AiOutlineArrowRight } from 'react-icons/ai';
 
 import HomeBG from './../../assets/images/exertrack-bg.svg';
 import Footer from '../shared/Footer';
+import Appbar from '../shared/Appbar';
 
 const Home = () => {
 	return(
 		<div className="home">
+
 		<section className="home-title-section" style={{ backgroundImage: `url('${HomeBG}')` }}>
+			<Appbar />
 			<h1 className="home-title">Exertrack</h1>
 		</section>
 		<section className="features">
