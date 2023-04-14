@@ -4,6 +4,9 @@ dependencies:
   preact:
     specifier: ^10.13.2
     version: registry.npmjs.org/preact@10.13.2
+  preact-router:
+    specifier: ^4.1.0
+    version: registry.npmjs.org/preact-router@4.1.0(preact@10.13.2)
   react-icons:
     specifier: ^4.8.0
     version: registry.npmjs.org/react-icons@4.8.0(react@18.2.0)
@@ -1091,6 +1094,17 @@ packages:
       picocolors: registry.npmjs.org/picocolors@1.0.0
       source-map-js: registry.npmjs.org/source-map-js@1.0.2
     dev: true
+
+  registry.npmjs.org/preact-router@4.1.0(preact@10.13.2):
+    resolution: {integrity: sha512-y1w2YvVpKAju9FMV+fAVR1NpH4MW5q07BZrziMZeg6F/rGJ9KvLUZtjOqsy2I8fDYiX36AM1AQTXIIK3jigBhA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/preact-router/-/preact-router-4.1.0.tgz}
+    id: registry.npmjs.org/preact-router/4.1.0
+    name: preact-router
+    version: 4.1.0
+    peerDependencies:
+      preact: '>=10'
+    dependencies:
+      preact: registry.npmjs.org/preact@10.13.2
+    dev: false
 
   registry.npmjs.org/preact@10.13.2:
     resolution: {integrity: sha512-q44QFLhOhty2Bd0Y46fnYW0gD/cbVM9dUVtNTDKPcdXSMA7jfY+Jpd6rk3GB0lcQss0z5s/6CmVP0Z/hV+g6pw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/preact/-/preact-10.13.2.tgz}
