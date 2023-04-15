@@ -1,5 +1,5 @@
 import Logo from './../../assets/images/exertrack.png';
-import ProfileLogo from './../../assets/images/sample.webp';
+import ProfileLogo from './../../assets/images/user.png';
 import ThemeSwitch from '../modules/ThemeSwitch';
 
 

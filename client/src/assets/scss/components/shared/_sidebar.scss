@@ -10,6 +10,7 @@
 	flex-direction: column;
 	align-items: center;justify-content: space-between;
 	transition: width, padding, 100ms ease-in;
+	z-index: 10;
 }
 .hide-sidebar {
 	width: 0;

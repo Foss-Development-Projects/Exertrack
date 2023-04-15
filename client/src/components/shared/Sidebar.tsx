@@ -1,6 +1,5 @@
-import { useEffect } from 'preact/hooks';
 import { Link } from 'preact-router/match';
-import ProfileLogo from './../../assets/images/sample.webp';
+import ProfileLogo from './../../assets/images/user.png';
 
 import { VscAccount, VscSettings } from 'react-icons/vsc';
 import { MdFitnessCenter, MdSearch } from 'react-icons/md';
@@ -8,6 +7,7 @@ import { SiWelcometothejungle } from 'react-icons/si';
 import { BiLogOutCircle, BiInfoCircle } from 'react-icons/bi';
 
 import ThemeSwitch from '../modules/ThemeSwitch';
+import { useEffect } from 'preact/hooks';
 
 const sidebarRoutes: Array<Object> = [
 	{ name: "Welcome", path: "/", icon: SiWelcometothejungle },
@@ -19,8 +19,13 @@ const sidebarRoutes: Array<Object> = [
 	{ name: "About", path: "/about", icon: BiInfoCircle },
 ]
 
-const sidebar: any = document.getElementById("sidebar")
-const Sidebar = () => {
+
+const Sidebar = (props: any) => {
+	let sidebar: any;
+	useEffect(() => {
+		sidebar = props.sidebar.current;
+	}, [props.sidebar.current])
+	
 	window.onload = () => {
 		if(window.innerWidth < 800 && !sidebar.classList.contains("hide-sidebar")) {
 			sidebar.classList.add("hide-sidebar")
@@ -38,7 +43,7 @@ const Sidebar = () => {
 		}
 	}
 	return(
-		<nav className="sidebar" id="sidebar">
+		<nav className="sidebar" id="sidebar" ref={sidebar}>
 			<ul className="sidebar-list">
 			{sidebarRoutes.map((item: any) => {
 				return(

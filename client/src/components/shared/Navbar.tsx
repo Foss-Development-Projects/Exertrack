@@ -1,14 +1,10 @@
-import { useEffect } from 'preact/hooks'
 import Logo from './../../assets/images/exertrack.png';
 
 import { BsReverseLayoutSidebarReverse } from 'react-icons/bs'
 
 const Navbar = (props: any) => {
-	useEffect(() => {
-		const sidebar: any = document.getElementById("sidebar")
-	}, [])
 	const toggleSidebar = () => {
-			sidebar.classList.toggle("hide-sidebar")
+			props.sidebar.current.classList.toggle("hide-sidebar")
 		}
 	
 	return(

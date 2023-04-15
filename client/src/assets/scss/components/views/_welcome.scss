@@ -2,9 +2,9 @@
 	height: 100%;
 	display: flex;
 	border-radius: 10px;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-direction: row;
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: center;
@@ -13,4 +13,29 @@
 .welcome-header {
 	font-family: "Playfair Display";
 	font-weight: lighter;
+	font-size: 36px;
+	color:white;
+	padding: 10px;
+}
+
+.welcome-daytime-logo-section {
+	padding: 10px;
+	img {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+}
+
+@media (max-width: 800px) {
+	.welcome-header {
+		font-size: 24px;
+	}
+}
+
+@media (max-width: 600px) {
+	.welcome-header {
+		font-size: 20px;
+	}
 }

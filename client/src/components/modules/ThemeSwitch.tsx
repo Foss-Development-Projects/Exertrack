@@ -49,7 +49,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 }));
 function ThemeSwitch () {
     return(
-        <MaterialUISwitch />
+        <MaterialUISwitch title='Current Theme' />
     )
 }
 
