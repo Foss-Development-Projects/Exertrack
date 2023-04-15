@@ -1,0 +1,118 @@
+.sidebar {
+	grid-area: app-sidebar;
+	background-color: var(--default-bg-color);
+	overflow-y: hidden;
+	border-radius: 10px;
+	padding: 10px;
+	width: 250px;
+	max-width: 250px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;justify-content: space-between;
+	transition: width, padding, 100ms ease-in;
+}
+.hide-sidebar {
+	width: 0;
+	padding: 10px 0;
+	transition: width, padding, 100ms ease-in;
+}
+
+.active-sidebar-link {
+	background-color: var(--default-fg-color)!important;
+	color: var(--default-bg-color)!important;
+	font-weight: bold!important;
+	transition: background-color, color, 100ms ease-in-out;
+}
+
+.sidebar-list {
+	width: 100%;
+	list-style: none;
+	overflow: scroll;
+	scrollbar-width: thin;
+	overflow-x: hidden;
+	height: 100%;
+	&::-webkit-scrollbar {
+		width: 5px;
+		display: none;
+	}
+}
+.sidebar-list-item a {
+	text-decoration: none;
+	font-weight: lighter;
+	font-size: 18px;
+	color: white;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 10px;
+	text-align: left;
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	border-radius: 10px;
+	transition: background-color, color, 100ms ease-in-out;
+	margin-bottom: 5px;
+	&:hover {
+		background-color: var(--default-fg-color)!important;
+		color: var(--default-bg-color)!important;
+		font-weight: bold!important;
+		transition: background-color, color, 100ms ease-in-out;
+	}
+	p {
+		margin-left: 5px;
+		font-family: "Open Sans", sans-serif;
+	}
+}
+
+.sidebar-profile {
+ width: 100%;
+ padding-top: 10px;
+}
+.sidebar-profile-item {
+	display: flex;
+	background-color: rgba(60, 60, 60, 0.7);
+	padding: 10px;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 10px;
+	&:nth-child(1) {
+		margin-bottom: 5px;
+	}
+	img {
+		width: 45px;
+		height: 45px;
+		object-fit: cover;
+		border-radius: 50%;
+	}
+	.sidebar-profile-item-detail {
+		font-weight: bolder;
+		color: var(--default-bg-color);
+		font-size: 16px;
+		font-family: "Roboto", sans-serif;
+	}
+}
+.box {
+	width: 50px;
+	height: 25px;
+	background-color: rgba(0,0,0,0.35);
+	border-radius: 20px;
+}
+
+@media (max-width: 800px) {
+	.sidebar {
+		height: calc(100% - 90px);
+		position: absolute;
+		top: 85px;
+		right: 5px;
+	}
+}
+
+@media (max-width: 400px) {
+	.sidebar-profile-item-detail {
+		font-size: 14px;
+	}
+}

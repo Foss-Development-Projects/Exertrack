@@ -1,0 +1,26 @@
+@use './../helpers/mixins' as mix;
+
+.footer {
+	grid-area: app-footer;
+	width: 100%;
+	background-color: var(--default-bg-color);
+	color: var(--default-fg-color);
+	padding: 10px;
+	border-radius: 10px;
+	@include mix.site-logo('footer');
+}
+.footer-intro {
+	font-family: "Playfair Display";
+	font-weight: bold;
+	margin-left: 50px;
+}
+.footer-copyright {
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+	align-items: center;
+	width: 100%;
+	font-weight: bold;
+	font-size: 14px;
+	font-family: "Open Sans", sans-serif;
+}
