@@ -1,0 +1,109 @@
+@use './../helpers/mixins' as mix;
+
+.search {
+	display: grid;
+	align-items: center;
+	grid-gap: 10px;
+	height: 100%;
+	width: 100%;
+	padding: 0 5px;
+	grid-template-rows: 60px 1fr;
+
+	&-form {
+		display: grid;
+		background-color: var(--default-fg-color);
+		font-family: "Roboto", sans-serif;
+		grid-template-columns: 1fr 45px;
+		color: white;
+		align-items: center;
+		justify-content: space-between;
+		padding: 5px 5px 5px 10px;
+		border-radius: 50px;
+	}
+
+	&-button {
+		@include mix.add-flex(center, center);
+		font-size: 25px;
+		height: 45px;
+		width: 45px;
+		border-radius: 50%;
+		border: none;
+		background: none;
+		outline: none;
+		color: inherit;
+		cursor: pointer;
+		&:hover {
+			background-color: var(--accent-color-5);
+		}
+	}
+
+	&-input {
+		height: 35px;
+		width: 100%;
+		font-family: inherit;
+		font-size: 20px;
+		font-weight: lighter;
+		border: none;
+		background: none;
+		color: inherit;
+		outline: none;
+
+		&::placeholder {
+			color: inherit;
+		}
+	}
+}
+
+.search-result-list {
+	border-radius: 10px;
+	height: 100%;
+	width: 100%;
+	list-style: none;
+	background: var(--default-bg-color);
+	overflow: scroll;
+	padding: 2.5px;
+}
+
+.search-result-item {
+	margin-bottom: 5px;
+	&-link {
+		box-shadow: 0 0 5px var(--default-fg-color);
+		display: grid;
+		grid-template-areas:
+			"search-result-image search-result-username"
+			"search-result-image search-result-content"
+		;
+		grid-template-columns: 50px 1fr;
+		background-color: var(--default-bg-color);
+		padding: 10px;
+		border-radius: 10px;
+		text-decoration: none;
+		cursor: pointer;
+		color: var(--default-fg-color);
+		font-family: "Roboto", sans-serif;
+		transform: translateY(0px);
+		transition: box-shadow, transform, 200ms ease-out;
+		&:hover {
+			box-shadow: 0 0 10px var(--default-fg-color);
+			transform: translateY(-2.5px);
+			transition: box-shadow, transform, 200ms ease-out;
+		}
+		&-profile-picture {
+			grid-area: search-result-image;
+			@include mix.profile-image(35px);
+		}
+		&-username {
+			grid-area: search-result-username;
+		}
+		&-content {
+			grid-area: search-result-content;
+			font-size: medium;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.search-result-item-link-content {
+		font-size: smaller;
+	}
+}

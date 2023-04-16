@@ -8,6 +8,8 @@ import Search from '../views/Search';
 import Settings from '../views/Settings';
 import Welcome from '../views/Welcome';
 
+import classes from './../../assets/css/border.module.css';
+
 const previewRoutes = [
 	{ name: Welcome, path: "/" },
 	{ name: Welcome, path: "/search" },
@@ -20,7 +22,7 @@ const previewRoutes = [
 
 const Preview = () => {
 	return(
-		<div className="preview">
+		<div className={`preview ${classes.add_border}`}>
 			<Router>
 			{/*{previewRoutes.map((item: any, index: number) => {
 				return(

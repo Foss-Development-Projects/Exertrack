@@ -1,0 +1,39 @@
+:root {
+	--profile-container-size: 175px;
+}
+.account {
+	
+}
+.account-profile-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.account-profile-container {
+	border-radius: 50%;
+	width: var(--profile-container-size);
+	height: var(--profile-container-size);
+	position: relative;
+	img {
+		width: var(--profile-container-size);
+		height: var(--profile-container-size);
+		object-fit: cover;
+		border-radius: 50%;
+	}
+}
+.profile-picture-input {
+	display: none;
+}
+.profile-picture-input-label {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	border-radius: 50%;
+	background-color: black;
+	color: white;
+	display: flex;
+	padding: 5px;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}

@@ -7,9 +7,15 @@
 @use './components/shared/preview';
 
 @use './components/views/home';
+@use './components/views/about';
+@use './components/views/workout';
+@use './components/views/search';
 @use './components/views/welcome';
+@use './components/views/account';
+@use './components/views/settings';
 
 @use './components/modules/feature_card';
+@use './components/modules/input_field';
 
 .container {
 	height: 100%;

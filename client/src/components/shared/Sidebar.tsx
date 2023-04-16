@@ -1,13 +1,13 @@
 import { Link } from 'preact-router/match';
-import ProfileLogo from './../../assets/images/user.png';
-
+import { useEffect,  useState } from 'preact/hooks';
 import { VscAccount, VscSettings } from 'react-icons/vsc';
 import { MdFitnessCenter, MdSearch } from 'react-icons/md';
 import { SiWelcometothejungle } from 'react-icons/si';
 import { BiLogOutCircle, BiInfoCircle } from 'react-icons/bi';
 
+import ProfileLogo from './../../assets/images/user.png';
 import ThemeSwitch from '../modules/ThemeSwitch';
-import { useEffect } from 'preact/hooks';
+import classes from './../../assets/css/border.module.css';
 
 const sidebarRoutes: Array<Object> = [
 	{ name: "Welcome", path: "/", icon: SiWelcometothejungle },
@@ -21,11 +21,10 @@ const sidebarRoutes: Array<Object> = [
 
 
 const Sidebar = (props: any) => {
-	let sidebar: any;
-	useEffect(() => {
-		sidebar = props.sidebar.current;
-	}, [props.sidebar.current])
-	
+	const [ sidebar, setSidebar ]: any = useState(null);
+      useEffect(() => {
+            setSidebar(props.sidebar.current)
+      }, [sidebar])
 	window.onload = () => {
 		if(window.innerWidth < 800 && !sidebar.classList.contains("hide-sidebar")) {
 			sidebar.classList.add("hide-sidebar")
@@ -35,15 +34,18 @@ const Sidebar = (props: any) => {
 		}
 	}
 	window.onresize = () => {
-		if(window.innerWidth < 800 && !sidebar.classList.contains("hide-sidebar")) {
+		if(window.innerWidth > 800 && sidebar.classList.contains("hide-sidebar")) {
+			sidebar.classList.remove("hide-sidebar")
+		}
+		else if(window.innerWidth < 800 && !sidebar.classList.contains("hide-sidebar")) {
 			sidebar.classList.add("hide-sidebar")
 		}
 		else {
-			sidebar.classList.remove("hide-sidebar")
+			return null;
 		}
 	}
 	return(
-		<nav className="sidebar" id="sidebar" ref={sidebar}>
+		<nav className={`sidebar ${classes.add_border}`} id="sidebar" ref={props.sidebar}>
 			<ul className="sidebar-list">
 			{sidebarRoutes.map((item: any) => {
 				return(
@@ -58,7 +60,7 @@ const Sidebar = (props: any) => {
 			</ul>
 			<ul className="sidebar-profile">
 				<li className="sidebar-profile-item">
-					<ThemeSwitch id="theme-switch" name="theme-switch" />
+					<ThemeSwitch />
 					<p className="sidebar-profile-item-detail">Appearance</p>
 				</li>
 				<li className="sidebar-profile-item">

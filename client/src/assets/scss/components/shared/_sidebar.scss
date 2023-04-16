@@ -15,7 +15,8 @@
 .hide-sidebar {
 	width: 0;
 	padding: 10px 0;
-	transition: width, padding, 100ms ease-in;
+	border: none!important;
+	transition:border, width, padding, 100ms ease-in;
 }
 
 .active-sidebar-link {
