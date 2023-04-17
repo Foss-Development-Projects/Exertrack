@@ -1,19 +1,26 @@
+@use './../helpers/mixins' as mix;
 :root {
 	--profile-container-size: 175px;
 }
 .account {
-	
-}
-.account-profile-section {
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	flex-direction: column;
+	height: 100%;
+	overflow: hidden;
+	overflow-y: scroll;
+	@include mix.scrollbar(5px, gray, var(--accent-color-3), 10px);
 }
+
+.account-profile-section {
+	@include mix.add-flex(center, center);
+}
+
 .account-profile-container {
 	border-radius: 50%;
 	width: var(--profile-container-size);
 	height: var(--profile-container-size);
 	position: relative;
+
 	img {
 		width: var(--profile-container-size);
 		height: var(--profile-container-size);
@@ -21,13 +28,15 @@
 		border-radius: 50%;
 	}
 }
+
 .profile-picture-input {
 	display: none;
 }
+
 .profile-picture-input-label {
 	position: absolute;
-	bottom: 20px;
 	right: 20px;
+	bottom: 20px;
 	border-radius: 50%;
 	background-color: black;
 	color: white;

@@ -33,3 +33,34 @@
 	justify-content: $jc;
 	flex-direction: $fd;
 }
+
+@mixin no-scrollbar {
+	::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+@mixin scrollbar($width: 15px, $bg-color:whitesmoke, $fg-color:darkgray, $rounded:0px) {
+	&::-webkit-scrollbar {
+		width: $width;
+		border-radius: 10px;
+		background-color: $bg-color;
+		&-thumb {
+			background-color: $fg-color;
+			border-radius: $rounded;
+
+		}
+		&-button {
+			display: none;
+		}
+		&-cornet {
+
+		}
+		&-thumb {
+
+		}
+		&-track-piece {
+
+		}
+	}
+}

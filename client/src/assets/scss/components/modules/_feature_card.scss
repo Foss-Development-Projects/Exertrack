@@ -10,6 +10,7 @@
 	user-select: none;
 	&::after {
 		z-index: -1;
+		backdrop-filter: blur(2px);
 		background: linear-gradient(45deg ,var(--feature-bg-color-1), var(--feature-bg-color-2));
 		content: '';
 		width: 100%;

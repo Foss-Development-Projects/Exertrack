@@ -1,45 +1,67 @@
 @use './../helpers/mixins' as mix;
+
 .account-input-field-section {
 	padding: 10px;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-gap: 15px;
+	justify-items: center;
+	margin-top: 20px;
 }
+
 .input-field {
+	width: 100%;
+	max-width: 500px;
 	display: grid;
-	grid-template-columns: 80px 1fr;
+	grid-template-columns:1fr;
 	align-items: center;
-	border-radius: 10px;
-	padding: 0 10px;
-	button {
-		padding: 2.5px 5px;
-		background: black;
-		fill: white;
-		border-radius: 50%;
-		width: 28px;
-		height: 28px;
-		cursor: pointer;
-		margin-top: 5px;
+	justify-content: center;
+	border-radius: 5px;
+	grid-gap: 5px;
+	font-family: "Open Sans";
+	font-size: 16px;
+	div::before, input::before, textarea::before {
+		background: none!important;
+	}
+	&:nth-child(4) {
+		font-size: 14px;
+	}
+	&-title {
+		font-family: "Open Sans";
+		font-weight: bold;
+		background-color: var(--default-fg-color);
+		color: var(--default-bg-color);
+		@include mix.add-flex(center, flex-start);
+
+		p {
+			margin: 0;
+		}
+	}
+
+	&-icon {
+		font-size: 30px;
+		margin-right: 5px;
 	}
 }
-.input-field-title p {
-	font-family: "Open Sans";
-	font-weight: bold;
-}
+
 .input-box {
 	font-family: "Open Sans", sans-serif;
 	cursor: text;
-	margin-left: 10px;
-	background: red;
 	overflow-x: hidden;
 	width: 100%;
 	&:hover {
 		background: none;
 	}
 }
-.input-editable {
-	border: none;
-	outline: none;
-	background: none;
+
+.editable-input {
+	@include mix.add-flex(center ,flex-start);
+	border: none!important;
+	outline: none!important;
 	width: 100%;
+	padding: 5px;
+	min-height: 40px;
+	&::before {
+		border-radius: 5px;
+	}
 }

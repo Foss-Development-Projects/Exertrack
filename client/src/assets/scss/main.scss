@@ -6,13 +6,16 @@
 @use './components/shared/footer';
 @use './components/shared/preview';
 
-@use './components/views/home';
 @use './components/views/about';
 @use './components/views/workout';
 @use './components/views/search';
 @use './components/views/welcome';
 @use './components/views/account';
 @use './components/views/settings';
+
+@use './components/pages/home';
+@use './components/pages/login';
+@use './components/pages/register';
 
 @use './components/modules/feature_card';
 @use './components/modules/input_field';
@@ -27,7 +30,7 @@
 		"app-preview app-sidebar"
 		"app-footer app-footer"
 	;
-	grid-template-rows: 75px calc(100% - 80px) 110px;
+	grid-template-rows: 75px calc(100% - 80px) 125px;
 	grid-template-columns: 1fr 250px;
 }
 

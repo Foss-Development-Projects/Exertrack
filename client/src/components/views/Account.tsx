@@ -1,9 +1,9 @@
 import { BsCamera2 } from 'react-icons/bs';
-import { FaSignature } from 'react-icons/fa';
+import { EditableText } from '@blueprintjs/core'
+import { Popover2, ToolTip2 } from "@blueprintjs/popover2";
 
 import ProfileLogo from './../../assets/images/user.png';
-import { EditText, EditTextarea } from 'react-edit-text';
-import 'react-edit-text/dist/index.css';
+import '@blueprintjs/core/lib/css/blueprint.css'
 const Account = () => {
 	return(
 		<div className="account">
@@ -18,43 +18,16 @@ const Account = () => {
 			</section>
 			<section className="account-input-field-section">
 				<div className="input-field">
-					<span className="input-field-title">
-						<p>Fullname:</p>
-					</span>
-					<EditText 
-						showEditButton
-						defaultValue='What should u be called ?'
-						placeholder='Fullname'
-						className='input-box'
-						name='profile_fname'
-						inputClassName='input-editable' 
-					/>
+					<EditableText confirmOnEnterKey type='text' className='editable-input' placeholder='Fullname' />
 				</div>
 				<div className="input-field">
-					<span className="input-field-title">
-						<p>Username:</p>
-					</span>
-					<EditText 
-						showEditButton
-						defaultValue='How about a custom name ?'
-						placeholder='Username'
-						className='input-box'
-						name='profile_uname'
-						inputClassName='input-editable' 
-					/>
+					<EditableText confirmOnEnterKey type='text' className='editable-input' placeholder='Username' />
 				</div>
 				<div className="input-field">
-					<span className="input-field-title">
-						<p>Email:</p>
-					</span>
-					<EditText 
-						showEditButton
-						defaultValue='Gmail, Yahoo, Microsoft..., anything will work'
-						placeholder='Email'
-						className='input-box'
-						name='profile_email'
-						inputClassName='input-editable' 
-					/>
+					<EditableText confirmOnEnterKey type='text' className='editable-input' placeholder='Email' />
+				</div>
+				<div className="input-field">
+					<EditableText multiline minLines={5} confirmOnEnterKey type='text' className='editable-input' placeholder='Bio' />
 				</div>
 			</section>
 		</div>

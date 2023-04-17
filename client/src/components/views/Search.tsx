@@ -31,6 +31,21 @@ const data : Array<Object> = [
 	 	uname: "Monster0123", 
 	 	bio: "content of this thing from anywhere", 
 	 	picture: UserLogo
+	 },
+	 { 
+	 	uname: "Monster0123", 
+	 	bio: "content of this thing from anywhere", 
+	 	picture: UserLogo
+	 },
+	 { 
+	 	uname: "Monster0123", 
+	 	bio: "content of this thing from anywhere", 
+	 	picture: UserLogo
+	 },
+	 { 
+	 	uname: "Monster0123", 
+	 	bio: "content of this thing from anywhere", 
+	 	picture: UserLogo
 	 }
 ] 
 

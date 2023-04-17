@@ -1,0 +1,23 @@
+@use './../helpers/mixins' as mix;
+
+.settings {
+	height: 100%;
+}
+.feature-settings-section {
+	height: 100%;
+	overflow: hidden;
+	overflow-y: scroll;
+	@include mix.scrollbar(5px, gray, var(--accent-color-3), 10px);
+}
+.feature-settings {
+	display: grid;
+	padding: 10px;
+	align-items: center;
+	justify-content: space-between;
+	grid-template-columns: 1fr 45px;
+	&-title {
+		font-size: 18px;
+		margin: 0;
+		@include mix.add-flex(center, flex-start);
+	}
+}

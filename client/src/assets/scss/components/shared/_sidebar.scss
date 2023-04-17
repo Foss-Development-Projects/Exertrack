@@ -1,3 +1,4 @@
+@use './../helpers/mixins' as mix;
 .sidebar {
 	grid-area: app-sidebar;
 	background-color: var(--default-bg-color);
@@ -43,20 +44,14 @@
 	font-weight: lighter;
 	font-size: 18px;
 	color: white;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
 	padding: 10px;
-	text-align: left;
 	background-color: rgba(0,0,0,0.5);
 	width: 100%;
-	height: 50px;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
+	height: 100%;
 	border-radius: 10px;
 	transition: background-color, color, 100ms ease-in-out;
 	margin-bottom: 5px;
+	@include mix.add-flex(center, flex-start);
 	&:hover {
 		background-color: var(--default-fg-color)!important;
 		color: var(--default-bg-color)!important;
@@ -64,6 +59,7 @@
 		transition: background-color, color, 100ms ease-in-out;
 	}
 	p {
+		margin: 0;
 		margin-left: 5px;
 		font-family: "Open Sans", sans-serif;
 	}
@@ -75,7 +71,8 @@
 }
 .sidebar-profile-item {
 	display: flex;
-	background-color: rgba(60, 60, 60, 0.7);
+	background-color: var(--default-bg-color);
+	color: var(--default-fg-color);
 	padding: 10px;
 	flex-direction: row-reverse;
 	align-items: center;
@@ -91,17 +88,15 @@
 		border-radius: 50%;
 	}
 	.sidebar-profile-item-detail {
+		@include mix.add-flex(flex-start, center, column);
 		font-weight: bolder;
-		color: var(--default-bg-color);
 		font-size: 16px;
 		font-family: "Roboto", sans-serif;
+		margin: 0;
+		p {
+			margin-bottom: 2.5px;
+		}
 	}
-}
-.box {
-	width: 50px;
-	height: 25px;
-	background-color: rgba(0,0,0,0.35);
-	border-radius: 20px;
 }
 
 @media (max-width: 800px) {

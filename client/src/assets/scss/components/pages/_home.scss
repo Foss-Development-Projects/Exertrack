@@ -1,3 +1,8 @@
+@use './../helpers/mixins' as mix;
+:root {
+	--login-button-bg-color: linear-gradient(45deg, deeppink, pink);
+	--register-button-bg-color: linear-gradient(45deg, darkblue, steelblue);
+}
 .home {
 	min-height: 100vh;
 	background-size: cover;
@@ -30,6 +35,51 @@
 		font-weight: bold;
 		font-family: "Roboto", sans-serif;
 		color: var(--default-fg-color);
+	}
+	.home-button-section {
+		width: 100%;
+		max-width: 500px;
+		height: 125px;
+		@include mix.add-flex(center, space-evenly);
+		.home-button {
+			width: 150px;
+			border-radius: 50px;
+			background: none;
+			border: none;
+			padding: 10px;
+			font-size: 20px;
+			position: relative;
+			z-index: 1;
+			backdrop-filter: blur(2px);
+			box-shadow: 0 0 5px var(--default-fg-color);
+			transition: box-shadow, 200ms ease-out;
+			&::after {
+				content: '';
+				display: block;
+				width: 100%;
+				border-radius: 50px;
+				height: 100%;
+				border: none;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: -1;
+			}
+			&:hover {
+				box-shadow: 0 0 15px var(--default-fg-color);
+				transition: box-shadow, 200ms ease-out;
+			}
+			a {
+				color: white;
+				text-decoration: none;
+			}
+		}
+		.home-login-button::after {
+			background:var(--login-button-bg-color);
+		}
+		.home-register-button::after {
+			background:var(--register-button-bg-color);
+		}
 	}
 }
 .features {
@@ -125,4 +175,10 @@
 			font-size: 18px;
 		}
 	}	
+}
+
+@media (max-width: 350px) {
+	.home-button-section {
+		flex-direction: column!important;
+	}
 }
