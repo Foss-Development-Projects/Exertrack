@@ -58,6 +58,30 @@
 		font-family: "Open Sans", sans-serif;
 	}
 }
+.form-textarea {
+	&-icon {
+		font-size: 24px;
+		height: 100%;
+		padding-top: 10px;
+		@include mix.add-flex(center, start, column);
+	}
+	&-field {
+		resize: none;
+		background: none;
+		outline: none;
+		padding-top: 10px;
+		color: var(--default-fg-color);
+		border: none;
+		font-size: 18px;
+		font-family: "Open Sans", sans-serif;
+		@include mix.scrollbar(5px);
+	}
+	&-char-count {
+		position: absolute;
+		right: 5px;
+		top: 2.5px;
+	}
+}
 .form-submit {
 	&-section {
 		@include mix.add-flex(center, center, column);

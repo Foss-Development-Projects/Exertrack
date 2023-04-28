@@ -3,7 +3,7 @@ import { useState } from 'preact/hooks';
 import { BiLockAlt } from 'react-icons/bi'
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
 import Appbar from '../shared/Appbar';
-import './../../assets/scss/components/styles/forgot-password.scss';
+import classes from './../../assets/css/reset-password.module.css';
 
 const PasswordReset = () => {
 	const [ eye1, setEye1 ] = useState(true);
@@ -12,7 +12,7 @@ const PasswordReset = () => {
 		<div className="form-container">
 			<Appbar />
 			<div className="form">
-				<header className="form-header">Forgot Password ?</header>
+				<header className="form-header">Reset Password</header>
 				<form className="form-body">
 					<section className="form-input-section">
 						<span className="form-input-icon">
@@ -33,8 +33,7 @@ const PasswordReset = () => {
 						</span>
 					</section>
 					<section className="form-submit-section">
-						<button className="form-submit-button" type="submit">Register</button>
-						<Link className="form-submit-link" href="/">Return To Home</Link>
+						<button className={`form-submit-button ${classes.form_submit_button}`} type="submit">Reset</button>
 					</section>
 				</form>
 			</div>

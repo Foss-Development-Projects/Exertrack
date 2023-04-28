@@ -1,6 +1,6 @@
 import { Link } from 'preact-router/match';
 import { useEffect,  useState } from 'preact/hooks';
-import { VscAccount, VscSettings } from 'react-icons/vsc';
+import { VscAccount, VscSettings, VscKey } from 'react-icons/vsc';
 import { MdFitnessCenter, MdSearch, MdDangerous } from 'react-icons/md';
 import { SiWelcometothejungle } from 'react-icons/si';
 import { BiInfoCircle } from 'react-icons/bi';
@@ -12,6 +12,7 @@ import classes from './../../assets/css/border.module.css';
 const sidebarRoutes: Array<Object> = [
 	{ name: "Welcome", path: "/", icon: SiWelcometothejungle },
 	{ name: "Account", path: "/account", icon: VscAccount },
+	{ name: "Password", path: "/password", icon: VscKey },
 	{ name: "Settings", path: "/settings", icon: VscSettings },
 	{ name: "Workouts", path: "/workouts", icon: MdFitnessCenter },
 	{ name: "Search", path: "/search", icon: MdSearch },

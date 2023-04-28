@@ -1,10 +1,13 @@
 import { BsCamera2 } from 'react-icons/bs';
-import { EditableText } from '@blueprintjs/core'
-
+import { BiUserCircle, BiUser, BiEnvelope } from 'react-icons/bi';
+import { useState } from 'preact/hooks';
+import { GiBookAura } from 'react-icons/gi';
 import ProfileLogo from './../../assets/images/user.png';
 import '@blueprintjs/core/lib/css/blueprint.css'
 const Account = () => {
-	return(
+	const maxLength = 250;
+	const [ charCount, setCharCount ] = useState(0);
+	return (
 		<div className="account">
 			<section className="account-profile-section">
 				<section className="account-profile-container">
@@ -15,20 +18,50 @@ const Account = () => {
 					<input className="profile-picture-input" id="profile-picture" type="file" name="profile_picture" />
 				</section>
 			</section>
-			<section className="account-input-field-section">
-				<div className="input-field">
-					<EditableText confirmOnEnterKey type='text' className='editable-input' placeholder='Fullname' />
-				</div>
-				<div className="input-field">
-					<EditableText confirmOnEnterKey type='text' className='editable-input' placeholder='Username' />
-				</div>
-				<div className="input-field">
-					<EditableText confirmOnEnterKey type='text' className='editable-input' placeholder='Email' />
-				</div>
-				<div className="input-field">
-					<EditableText maxLength={250} multiline minLines={6} confirmOnEnterKey contentId='account-bio-input-field' type='text'  className='editable-input' placeholder='Bio' />
-				</div>
-			</section>
+			<form className="account-section">
+				<section className="form-input-section">
+					<span className="form-input-icon">
+						<BiUser />
+					</span>
+					<input type='text' name="account_change_fullname" className="form-input-field" placeholder="Change Name" />
+				</section>
+				<section className="form-input-section">
+					<span className="form-input-icon">
+						<BiUserCircle />
+					</span>
+					<input type='text' name="account_change_username" className="form-input-field" placeholder="Change Username" />
+				</section>
+				<section className="form-input-section">
+					<span className="form-input-icon">
+						<BiEnvelope />
+					</span>
+					<input type='text' name="account_change_email" className="form-input-field" placeholder="Change Email" />
+				</section>
+
+				<section className="form-input-section">
+					<p 
+						className="form-textarea-char-count" 
+						style={charCount == maxLength ? {color:'orangered'} : {color:'inherit'}}
+					>
+					{charCount}/{maxLength}
+					</p>
+					<span className="form-textarea-icon">
+						<GiBookAura />
+					</span>
+					<textarea 
+						maxLength={maxLength} 
+						rows={6} 
+						name='account_bio' 
+						type='text' 
+						className='form-textarea-field' 
+						placeholder='Bio' 
+						onChange={(e: any) => setCharCount(e.target.value.length)}
+					></textarea>
+				</section>
+				<section className="form-submit-section">
+					<button className="form-submit-button" type="submit">Update</button>
+				</section>
+			</form>
 		</div>
 	)
 }

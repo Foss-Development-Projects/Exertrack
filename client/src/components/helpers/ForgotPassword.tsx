@@ -4,7 +4,7 @@ import Appbar from '../shared/Appbar';
 import classes from './../../assets/css/forgotpassword.module.css';
 
 const ForgotPassword = () => {
-	return(
+	return (
 		<div className="form-container">
 			<Appbar />
 			<div className="form">

@@ -3,12 +3,22 @@
 	--profile-container-size: 175px;
 }
 .account {
-	display: flex;
-	flex-direction: column;
 	height: 100%;
 	overflow: hidden;
 	overflow-y: scroll;
 	@include mix.scrollbar(5px, gray, var(--accent-color-3), 10px);
+	// @include mix.add-flex(center, center, column);
+	display: grid;
+	grid-template-columns: 1fr;
+	align-items: center;
+	justify-content: center;
+	justify-items: center;
+	gap: 20px;
+	grid-template-rows: 200px 1fr;
+	&-section {
+		max-width: 600px;
+		width: 100%;
+	}
 }
 
 .account-profile-section {
