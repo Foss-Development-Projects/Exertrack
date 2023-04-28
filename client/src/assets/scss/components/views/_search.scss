@@ -19,6 +19,7 @@
 		justify-content: space-between;
 		padding: 5px 5px 5px 10px;
 		border-radius: 50px;
+		border: 1px solid var(--default-fg-color);
 	}
 
 	&-button {
@@ -61,7 +62,8 @@
 	list-style: none;
 	overflow: hidden;
 	overflow-y: scroll;
-	padding: 2.5px;
+	padding: 5px;
+	padding-right: 10px;
 	@include mix.scrollbar(5px, gray, var(--accent-color-3), 10px);
 }
 
@@ -83,11 +85,11 @@
 		color: var(--default-fg-color);
 		font-family: "Roboto", sans-serif;
 		transform: translateY(0px);
-		transition: box-shadow, transform, 200ms ease-out;
+		transition: box-shadow, transform, 100ms ease-out;
 		&:hover {
 			box-shadow: 0 0 10px var(--default-fg-color);
-			transform: translateY(-2.5px);
-			transition: box-shadow, transform, 200ms ease-out;
+			transform: translateY(-1.5px);
+			transition: box-shadow, transform, 100ms ease-out;
 		}
 		&-profile-picture {
 			grid-area: search-result-image;

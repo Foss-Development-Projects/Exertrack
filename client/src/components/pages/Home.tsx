@@ -1,5 +1,6 @@
-import { AiOutlineArrowRight, AiFillAccountBook } from 'react-icons/ai';
-
+import { AiOutlineArrowRight, AiFillAccountBook, } from 'react-icons/ai';
+import { BiHappyHeartEyes, BiMoneyWithdraw } from 'react-icons/bi';
+import {  } from 'react-icons/bs';
 import HomeBG from './../../assets/images/exertrack-bg.svg';
 import Footer from '../shared/Footer';
 import Appbar from '../shared/Appbar';
@@ -7,28 +8,26 @@ import { Link } from 'preact-router';
 
 const data: Array<Object> = [
 	{ 
-		title: "TiTlE", 
+		title: "Easy To Use", 
+		content: "Setup your exercises the easiest way, with exertrack",
+		icon: BiHappyHeartEyes
+	},
+	{ 
+		title: "Title", 
 		content: "kyscraper vehicle j-pop beef noodles carbon towards modem Kowloon monofilament. Car dolphin physical dissident sub-orbital weathered office computer chrome long-chain hydrocarbons ",
 		icon: AiFillAccountBook
 	},
 	{ 
-		title: "TiTlE", 
+		title: "Title", 
 		content: "kyscraper vehicle j-pop beef noodles carbon towards modem Kowloon monofilament. Car dolphin physical dissident sub-orbital weathered office computer chrome long-chain hydrocarbons ",
 		icon: AiFillAccountBook
 	},
 	{ 
-		title: "TiTlE", 
-		content: "kyscraper vehicle j-pop beef noodles carbon towards modem Kowloon monofilament. Car dolphin physical dissident sub-orbital weathered office computer chrome long-chain hydrocarbons ",
-		icon: AiFillAccountBook
-	},
-	{ 
-		title: "TiTlE", 
-		content: "kyscraper vehicle j-pop beef noodles carbon towards modem Kowloon monofilament. Car dolphin physical dissident sub-orbital weathered office computer chrome long-chain hydrocarbons ",
-		icon: AiFillAccountBook
+		title: "Free", 
+		content: "No Need to pay for anything for personal use",
+		icon: BiMoneyWithdraw
 	}
 ]
-
-
 
 const Home = () => {
 	return (

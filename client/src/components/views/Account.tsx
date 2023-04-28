@@ -1,6 +1,5 @@
 import { BsCamera2 } from 'react-icons/bs';
 import { EditableText } from '@blueprintjs/core'
-import { Popover2, ToolTip2 } from "@blueprintjs/popover2";
 
 import ProfileLogo from './../../assets/images/user.png';
 import '@blueprintjs/core/lib/css/blueprint.css'
@@ -27,7 +26,7 @@ const Account = () => {
 					<EditableText confirmOnEnterKey type='text' className='editable-input' placeholder='Email' />
 				</div>
 				<div className="input-field">
-					<EditableText multiline minLines={5} confirmOnEnterKey type='text' className='editable-input' placeholder='Bio' />
+					<EditableText maxLength={250} multiline minLines={6} confirmOnEnterKey contentId='account-bio-input-field' type='text'  className='editable-input' placeholder='Bio' />
 				</div>
 			</section>
 		</div>

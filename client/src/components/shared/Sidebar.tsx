@@ -1,9 +1,9 @@
 import { Link } from 'preact-router/match';
 import { useEffect,  useState } from 'preact/hooks';
 import { VscAccount, VscSettings } from 'react-icons/vsc';
-import { MdFitnessCenter, MdSearch } from 'react-icons/md';
+import { MdFitnessCenter, MdSearch, MdDangerous } from 'react-icons/md';
 import { SiWelcometothejungle } from 'react-icons/si';
-import { BiLogOutCircle, BiInfoCircle } from 'react-icons/bi';
+import { BiInfoCircle } from 'react-icons/bi';
 
 import ProfileLogo from './../../assets/images/user.png';
 import ThemeSwitch from '../modules/ThemeSwitch';
@@ -15,7 +15,7 @@ const sidebarRoutes: Array<Object> = [
 	{ name: "Settings", path: "/settings", icon: VscSettings },
 	{ name: "Workouts", path: "/workouts", icon: MdFitnessCenter },
 	{ name: "Search", path: "/search", icon: MdSearch },
-	{ name: "Logout", path: "/logout", icon: BiLogOutCircle },
+	{ name: "Danger", path: "/danger", icon: MdDangerous },
 	{ name: "About", path: "/about", icon: BiInfoCircle },
 ]
 
@@ -25,23 +25,10 @@ const Sidebar = (props: any) => {
       useEffect(() => {
             setSidebar(props.sidebar.current)
       }, [sidebar])
-	window.onload = () => {
-		if(window.innerWidth < 800 && !sidebar.classList.contains("hide-sidebar")) {
-			sidebar.classList.add("hide-sidebar")
-		}
-		else {
-			sidebar.classList.remove("hide-sidebar")
-		}
-	}
+		
 	window.onresize = () => {
 		if(window.innerWidth > 800 && sidebar.classList.contains("hide-sidebar")) {
 			sidebar.classList.remove("hide-sidebar")
-		}
-		else if(window.innerWidth < 800 && !sidebar.classList.contains("hide-sidebar")) {
-			sidebar.classList.add("hide-sidebar")
-		}
-		else {
-			return null;
 		}
 	}
 	return(

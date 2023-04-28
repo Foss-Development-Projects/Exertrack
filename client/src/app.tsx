@@ -4,7 +4,7 @@ import Layout from "./components/layout/Layout"
 import Home from './components/pages/Home';
 import NotFound from './components/helpers/404';
 
-export function App() {
+export default function App() {
   return (
       <Router>
         <Home path="/" />

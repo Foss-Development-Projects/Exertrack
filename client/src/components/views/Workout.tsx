@@ -1,7 +1,7 @@
 const Workout = () => {
 	return(
 		<div>
-			<h1>Workout View</h1>
+			<h2>Workout View</h2>
 		</div>
 	)
 }

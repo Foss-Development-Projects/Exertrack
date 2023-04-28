@@ -11,7 +11,7 @@
 	&::after {
 		z-index: -1;
 		backdrop-filter: blur(2px);
-		background: linear-gradient(45deg ,var(--feature-bg-color-1), var(--feature-bg-color-2));
+		background: var(--default-bg-color);
 		content: '';
 		width: 100%;
 		height: 100%;
@@ -20,7 +20,7 @@
 		left: 0;
 		backdrop-filter: blur(2px);
 		border-radius: 10px;
-		box-shadow: 0 0 10px var(--default-fg-color);
+		box-shadow: 0 0 5px var(--default-bg-color);
 
 	}
 	&:hover {
@@ -34,6 +34,7 @@
 		grid-template-columns: 30px 1fr;
 		grid-gap: 2.5px;
 		align-items: center;
+		margin-bottom: 10px;
 		&-icon {
 			display: flex;
 			align-items: center;
@@ -42,7 +43,7 @@
 		&-title {
 			font-family: "Roboto", sans-serif;
 			letter-spacing: 0.5px;
-			color: white;
+			color: var(--default-fg-color);
 		}
 	}
 	&-body {

@@ -12,14 +12,14 @@
 .input-field {
 	width: 100%;
 	max-width: 500px;
-	display: grid;
-	grid-template-columns:1fr;
+	display: flex;
 	align-items: center;
 	justify-content: center;
 	border-radius: 5px;
 	grid-gap: 5px;
 	font-family: "Open Sans";
 	font-size: 16px;
+	border: 1px solid var(--accent-color-2);
 	div::before, input::before, textarea::before {
 		background: none!important;
 	}

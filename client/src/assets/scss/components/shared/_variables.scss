@@ -1,14 +1,11 @@
 :root {
-	--default-bg-color:rgba(0,0,0,0.85);
-	--default-fg-color:whitesmoke;
-	// --default-fg-color:rgba(0,0,0,0.85);
-	// --default-bg-color:whitesmoke;
+	// --default-bg-color:rgba(0,0,0,0.85);
+	// --default-fg-color:whitesmoke;
+	--default-fg-color:rgba(0,0,0,0.85);
+	--default-bg-color:rgba(255,255,255,0.85);
 	--accent-color-1:red;
-	--accent-color-2:blue;
+	--accent-color-2:rgb(14, 86, 194);
 	--accent-color-3: palegreen;
 	--accent-color-4: orange;
 	--accent-color-5:orangered;
-
-	--feature-bg-color-1:rgba(0,0,0,0.5);
-	--feature-bg-color-2:rgba(0,0,0,0.7);
 }
