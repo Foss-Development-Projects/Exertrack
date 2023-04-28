@@ -36,14 +36,14 @@ const Home = () => {
 				<Appbar />
 				<h1 className="home-title">Exertrack</h1>
 				<p className="home-intro">Best App To Track Your Workout Progress</p>
-			<section className="home-button-section">
-				<button className="home-button home-login-button">
-					<Link href="#">Login</Link>
-				</button>
-				<button className="home-button home-register-button">
-					<Link href="#">Register</Link>
-				</button>
-			</section>
+				<section className="home-button-section">
+					<button className="home-button home-login-button">
+						<Link href="/signin">Login</Link>
+					</button>
+					<button className="home-button home-register-button">
+						<Link href="/register">Register</Link>
+					</button>
+				</section>
 			</section>
 			
 			<section className="features">
