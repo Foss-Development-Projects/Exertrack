@@ -1,37 +1,37 @@
 @mixin site-logo($name) {
 	.#{$name}-header {
-		display: flex;
 		align-items: center;
-		text-decoration: none;
 		color: inherit;
+		display: flex;
+		text-decoration: none;
 		width: 192.5px;
 	}
 	.#{$name}-header-logo {
-		max-width: 45px;
-		max-height: 45px;
-		background-color: rgba(0,0,0,0.95);
+		background-color: rgb(0 0 0 / 95%);
 		border-radius: 50%;
+		max-height: 45px;
+		max-width: 45px;
 	}
 	.#{$name}-header-title {
-		font-size: 30px;
-		margin-left: 5px;
-		font-weight: bold;
 		font-family: "Montserrat Alternates", sans-serif;
+		font-size: 30px;
+		font-weight: bold;
+		margin-left: 5px;
 	}
 }
 
 @mixin profile-image($size) {
-	width: $size;
+	border-radius: 50%;
 	height: $size;
 	object-fit: cover;
-	border-radius: 50%;
+	width: $size;
 }
 
 @mixin add-flex($ai, $jc, $fd : row) {
-	display: flex;
 	align-items: $ai;
-	justify-content: $jc;
+	display: flex;
 	flex-direction: $fd;
+	justify-content: $jc;
 }
 
 @mixin no-scrollbar {
@@ -40,18 +40,47 @@
 	}
 }
 
-@mixin scrollbar($width: 15px, $bg-color:whitesmoke, $fg-color:darkgray, $rounded:0px) {
+@mixin scrollbar($width: 15px, $bg-color:whitesmoke, $fg-color:darkgray, $rounded:0) {
 	&::-webkit-scrollbar {
-		width: $width;
-		border-radius: 10px;
 		background-color: $bg-color;
+		border-radius: 10px;
+		width: $width;
+
 		&-thumb {
 			background-color: $fg-color;
 			border-radius: $rounded;
 
 		}
+
 		&-button {
 			display: none;
 		}
+	}
+}
+
+@mixin custom-btn(
+	$bg: var(--default-fg-color), 
+	$fg: var(--default-bg-color), 
+	$shadow-color: var(--default-fg-color) , 
+	$shadow: 10px, 
+	$width: 150px, 
+	$br: 100px
+){
+	background: $bg;
+	border: none;
+	border-radius: $br;
+	color: $fg;
+	cursor: pointer;
+	font-family: "Roboto Sans", sans-serif;
+	font-size: 20px;
+	margin-bottom: 10px;
+	outline: none;
+	padding: 10px;
+	transition: box-shadow, 200ms ease-in-out;
+	width: $width;
+
+	&:hover {
+		box-shadow: 0 0 $shadow $shadow-color;
+		transition: box-shadow, 200ms ease-in-out;
 	}
 }

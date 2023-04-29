@@ -2,118 +2,124 @@
 @use './../shared/variables';
 
 .form-container {
+	color: var(--default-fg-color);
 	padding: 10px;
 	padding-top: 150px;
-	@include mix.add-flex(center, center, column);
-	color: var(--default-fg-color);
 	width: 100%;
 
+	@include mix.add-flex(center, center, column);
+
 }
+
 .form {
-	max-width: 600px;
-	width: 100%;
-	padding: 10px;
 	border-radius: 10px;
+	max-width: 600px;
+	padding: 10px;
+	width: 100%;
+
 	&-header {
-		text-align: center;
 		font-size: 36px;
 		margin-bottom: 15px;
+		text-align: center;
 	}
+
 	&-body {
 		@include mix.add-flex(center, center, column);
 	}
 }
+
 .form-input {
 	&-section {
-		display: grid;
-		width: 100%;
 		align-items: center;
+		border: 1px solid var(--default-fg-color);
+		border-radius: 10px;
+		display: grid;
 		grid-template-columns: 35px 1fr;
 		grid-template-rows: 1fr;
-		padding: 5px;
-		border-radius: 10px;
 		margin-bottom: 15px;
-		border: 1px solid var(--default-fg-color);
+		padding: 5px;
 		position: relative;
+		width: 100%;
 	}
+
 	&-icon {
 		font-size: 24px;
+
 		@include mix.add-flex(center, center);
 	}
+
 	&-eye-icon {
+		cursor: pointer;
 		font-size: 24px;
-		@include mix.add-flex(center, center);
 		position: absolute;
 		right: 10px;
 		top: 11px;
-		cursor: pointer;
+
+		@include mix.add-flex(center, center);
 	}
+
 	&-field {
-		height: 35px;
 		background: none;
-		outline: none;
-		color: var(--default-fg-color);
 		border: none;
-		font-size: 18px;
+		color: var(--default-fg-color);
 		font-family: "Open Sans", sans-serif;
+		font-size: 18px;
+		height: 35px;
+		outline: none;
 	}
 }
+
 .form-textarea {
 	&-icon {
 		font-size: 24px;
 		height: 100%;
 		padding-top: 10px;
+
 		@include mix.add-flex(center, start, column);
 	}
+
 	&-field {
-		resize: none;
 		background: none;
+		border: none;
+		color: var(--default-fg-color);
+		font-family: "Open Sans", sans-serif;
+		font-size: 18px;
 		outline: none;
 		padding-top: 10px;
-		color: var(--default-fg-color);
-		border: none;
-		font-size: 18px;
-		font-family: "Open Sans", sans-serif;
+		resize: none;
+
 		@include mix.scrollbar(5px);
 	}
+
 	&-char-count {
+		font-family: "Open Sans", sans-serif;
+		font-size: small;
 		position: absolute;
 		right: 5px;
 		top: 2.5px;
 	}
 }
+
 .form-submit {
 	&-section {
 		@include mix.add-flex(center, center, column);
+
 		&:nth-child(2){
 			color: var(--accent-color-2);
 		}
 	}
+
 	&-button {
-		border: none;
-		outline: none;
-		color: whitesmoke;
-		padding: 10px;
-		font-size: 20px;
-		width: 150px;
-		font-family: "Roboto Sans", sans-serif;
-		border-radius: 100px;
-		background: var(--login-button-bg-color);
-		margin-bottom: 10px;
-		transition: box-shadow, 200ms ease-in-out;
-		cursor: pointer;
-		&:hover {
-			transition: box-shadow, 200ms ease-in-out;
-			box-shadow: 0 0 15px hotpink;
-		}
+		@include mix.custom-btn(linear-gradient(45deg, green, palegreen), white, palegreen, 15px, 150px);
 	}
+
 	&-link {
 		font-weight: bold;
 		margin-bottom: 5px;
 	}
 }
 
-@media (max-width: 600px){
+@media (width <= 600px){
 	.form-header {
 		font-size: 24px;
 	}

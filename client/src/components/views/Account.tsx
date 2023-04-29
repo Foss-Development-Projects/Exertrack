@@ -3,7 +3,6 @@ import { BiUserCircle, BiUser, BiEnvelope } from 'react-icons/bi';
 import { useState } from 'preact/hooks';
 import { GiBookAura } from 'react-icons/gi';
 import ProfileLogo from './../../assets/images/user.png';
-import '@blueprintjs/core/lib/css/blueprint.css'
 const Account = () => {
 	const maxLength = 250;
 	const [ charCount, setCharCount ] = useState(0);

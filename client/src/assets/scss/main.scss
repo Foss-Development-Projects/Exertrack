@@ -14,6 +14,7 @@
 @use './components/views/account';
 @use './components/views/password';
 @use './components/views/settings';
+@use './components/views/danger';
 
 @use './components/pages/home';
 @use './components/pages/login';
@@ -23,20 +24,20 @@
 @use './components/modules/input_field';
 
 .container {
-	height: 100%;
 	display: grid;
 	grid-gap: 5px;
-	padding: 5px;
 	grid-template-areas: 
 		"app-navbar app-navbar"
 		"app-preview app-sidebar"
 		"app-footer app-footer"
 	;
-	grid-template-rows: 75px calc(100% - 80px) 125px;
 	grid-template-columns: 1fr 250px;
+	grid-template-rows: 75px calc(100% - 80px) 125px;
+	height: 100%;
+	padding: 5px;
 }
 
-@media (max-width: 800px) {
+@media (width <= 800px) {
 	.container {
 		grid-template-areas: 
 			"app-navbar app-navbar"

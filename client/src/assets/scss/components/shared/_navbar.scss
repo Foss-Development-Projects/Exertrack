@@ -1,35 +1,37 @@
 @use './../helpers/mixins' as mix;
 
 .navbar {
-	grid-area: app-navbar;
-	background-color: var(--default-bg-color);
-	color: var(--default-fg-color);
-	padding: 15px 10px;
-	display: flex;
 	align-items: center;
+	background-color: var(--default-bg-color);
 	border-radius: 10px;
+	color: var(--default-fg-color);
+	display: flex;
+	grid-area: app-navbar;
 	justify-content: space-between;
+	padding: 15px 10px;
+
 	@include mix.site-logo("navbar");
 }
 
 .navbar-toggle-button {
-	color: var(--default-fg-color);
-	background: none;
-	outline: none;
-	display: none;
 	align-items: center;
-	justify-content: center;
-	padding: 10px;
-	cursor: pointer;
-	border-radius: 50%;
+	background: none;
 	border: 1px solid var(--default-fg-color);
+	border-radius: 50%;
+	color: var(--default-fg-color);
+	cursor: pointer;
+	display: none;
+	justify-content: center;
+	outline: none;
+	padding: 10px;
 	transition: box-shadow, 100ms ease-in-out;
+
 	&:hover {
 		box-shadow: 0 0 5px var(--default-fg-color);
 		transition: box-shadow, 100ms ease-in-out;
 	}
 }
 
-@media (max-width: 800px) {
+@media (width <= 800px) {
 	.navbar-toggle-button {display: flex;}
 }

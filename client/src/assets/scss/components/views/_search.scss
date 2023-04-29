@@ -1,53 +1,55 @@
 @use './../helpers/mixins' as mix;
 
 .search {
-	display: grid;
 	align-items: center;
+	display: grid;
 	grid-gap: 10px;
-	height: 100%;
-	width: 100%;
-	padding: 0 5px;
 	grid-template-rows: 60px 1fr;
+	height: 100%;
+	padding: 0 5px;
+	width: 100%;
 
 	&-form {
-		display: grid;
-		background-color: var(--default-bg-color);
-		font-family: "Roboto", sans-serif;
-		grid-template-columns: 1fr 45px;
-		color: var(--default-fg-color);
 		align-items: center;
+		background-color: var(--default-bg-color);
+		border: 1px solid var(--default-fg-color);
+		border-radius: 50px;
+		color: var(--default-fg-color);
+		display: grid;
+		font-family: Roboto, sans-serif;
+		grid-template-columns: 1fr 45px;
 		justify-content: space-between;
 		padding: 5px 5px 5px 10px;
-		border-radius: 50px;
-		border: 1px solid var(--default-fg-color);
 	}
 
 	&-button {
 		@include mix.add-flex(center, center);
-		font-size: 25px;
-		height: 45px;
-		width: 45px;
-		border-radius: 50%;
-		border: none;
+
 		background: none;
-		outline: none;
+		border: none;
+		border-radius: 50%;
 		color: inherit;
 		cursor: pointer;
+		font-size: 25px;
+		height: 45px;
+		outline: none;
+		width: 45px;
+
 		&:hover {
 			background-color: var(--accent-color-5);
 		}
 	}
 
 	&-input {
-		height: 35px;
-		width: 100%;
+		background: none;
+		border: none;
+		color: inherit;
 		font-family: inherit;
 		font-size: 20px;
 		font-weight: lighter;
-		border: none;
-		background: none;
-		color: inherit;
+		height: 35px;
 		outline: none;
+		width: 100%;
 
 		&::placeholder {
 			color: inherit;
@@ -58,56 +60,63 @@
 .search-result-list {
 	border-radius: 10px;
 	height: 100%;
-	width: 100%;
 	list-style: none;
 	overflow: hidden;
 	overflow-y: scroll;
 	padding: 5px;
 	padding-right: 10px;
+	width: 100%;
+
 	@include mix.scrollbar(5px, gray, var(--accent-color-3), 10px);
 }
 
 .search-result-item {
 	margin-bottom: 5px;
+
 	&-link {
+		background-color: var(--default-bg-color);
+		border-radius: 10px;
 		box-shadow: 0 0 5px var(--default-fg-color);
+		color: var(--default-fg-color);
+		cursor: pointer;
 		display: grid;
+		font-family: Roboto, sans-serif;
 		grid-template-areas:
 			"search-result-image search-result-username"
 			"search-result-image search-result-content"
 		;
 		grid-template-columns: 50px 1fr;
-		background-color: var(--default-bg-color);
 		padding: 10px;
-		border-radius: 10px;
 		text-decoration: none!important;
-		cursor: pointer;
-		color: var(--default-fg-color);
-		font-family: "Roboto", sans-serif;
-		transform: translateY(0px);
+		transform: translateY(0);
 		transition: box-shadow, transform, 100ms ease-out;
+
 		&:hover {
 			box-shadow: 0 0 10px var(--default-fg-color);
 			transform: translateY(-1.5px);
 			transition: box-shadow, transform, 100ms ease-out;
 		}
+
 		&-profile-picture {
 			grid-area: search-result-image;
+
 			@include mix.profile-image(35px);
 		}
+
 		&-username {
-			text-decoration: none;
 			grid-area: search-result-username;
-		}
-		&-content {
 			text-decoration: none;
-			grid-area: search-result-content;
+		}
+
+		&-content {
 			font-size: medium;
+			grid-area: search-result-content;
+			text-decoration: none;
 		}
 	}
 }
 
-@media (max-width: 600px) {
+@media (width <= 600px) {
 	.search-result-item-link-content {
 		font-size: smaller;
 	}

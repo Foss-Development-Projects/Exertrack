@@ -1,17 +1,25 @@
+@use './../helpers/mixins' as mix;
+
 * {
-	padding: 0;
-	margin: 0;
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
+
 html, body {
 	height: 100%;
 	width: 100%;
 }
+
 body {
 	background-color: var(--default-bg-color);
 }
+
 #app {
 	height: inherit;
 	width: inherit;
 
+}
+.icon {
+	@include mix.add-flex(center, center);
 }

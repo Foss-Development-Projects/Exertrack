@@ -1,4 +1,4 @@
-import { BiSearchAlt } from 'react-icons/bi';
+
 import UserLogo from './../../assets/images/user.png';
 
 const data : Array<Object> = [
@@ -52,20 +52,14 @@ const data : Array<Object> = [
 const Search = () => {
 	return(
 		<div className="search">
-			<form className="search-form" action="" method="GET">
-				<input placeholder="Search" className="search-input" id="search-input" name="search" />
-				<button type="submit" className="search-button">
-					<BiSearchAlt className='search-button-icon' />
-				</button>
-			</form>
 			<ul className="search-result-list">
 				{data.map((item: any, index: number) => {
 					return(
 						<li className="search-result-item" key={index}>
 							<a className="search-result-item-link" href="#">
 								<img 
-									className="search-result-item-link-profile-picture" 
-									src={item.picture} 
+									className="search-result-item-link-profile-picture"
+									src={item.picture}
 									alt="Profile Picture"
 									loading="lazy"
 								/>

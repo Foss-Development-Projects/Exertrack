@@ -1,36 +1,40 @@
 @use './../helpers/mixins' as mix;
 
 .account-input-field-section {
-	padding: 10px;
 	display: grid;
-	grid-template-columns: 1fr;
 	grid-gap: 15px;
+	grid-template-columns: 1fr;
 	justify-items: center;
 	margin-top: 20px;
+	padding: 10px;
 }
 
 .input-field {
-	width: 100%;
-	max-width: 500px;
-	display: flex;
 	align-items: center;
-	justify-content: center;
+	border: 1px solid var(--accent-color-2);
 	border-radius: 5px;
-	grid-gap: 5px;
+	display: flex;
 	font-family: "Open Sans";
 	font-size: 16px;
-	border: 1px solid var(--accent-color-2);
+	grid-gap: 5px;
+	justify-content: center;
+	max-width: 500px;
+	width: 100%;
+
 	div::before, input::before, textarea::before {
 		background: none!important;
 	}
+
 	&:nth-child(4) {
 		font-size: 14px;
 	}
+
 	&-title {
-		font-family: "Open Sans";
-		font-weight: bold;
 		background-color: var(--default-fg-color);
 		color: var(--default-bg-color);
+		font-family: "Open Sans";
+		font-weight: bold;
+
 		@include mix.add-flex(center, flex-start);
 
 		p {
@@ -45,10 +49,11 @@
 }
 
 .input-box {
-	font-family: "Open Sans", sans-serif;
 	cursor: text;
+	font-family: "Open Sans", sans-serif;
 	overflow-x: hidden;
 	width: 100%;
+
 	&:hover {
 		background: none;
 	}
@@ -56,11 +61,13 @@
 
 .editable-input {
 	@include mix.add-flex(center ,flex-start);
+
 	border: none!important;
-	outline: none!important;
-	width: 100%;
-	padding: 5px;
 	min-height: 40px;
+	outline: none!important;
+	padding: 5px;
+	width: 100%;
+
 	&::before {
 		border-radius: 5px;
 	}

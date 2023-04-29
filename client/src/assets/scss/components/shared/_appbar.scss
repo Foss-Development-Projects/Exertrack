@@ -1,32 +1,36 @@
 @use './../helpers/mixins' as mix;
 
 .appbar {
-	grid-area: app-appbar;
-	color: var(--default-fg-color);
-	padding: 15px 10px;
-	display: flex;
 	align-items: center;
+	color: var(--default-fg-color);
+	display: flex;
+	grid-area: app-appbar;
 	justify-content: space-between;
-	@include mix.site-logo("appbar");
+	left: 0;
+	padding: 15px 10px;
 	position: absolute;
 	top: 0;
 	width: 100%;
-	left: 0;
+
+	@include mix.site-logo("appbar");
 }
+
 .appbar-body {
-	display: flex;
 	align-items: center;
+	display: flex;
 	justify-content: space-between;
+
 	&-profile {
-		box-shadow: 0 0 10px var(--default-fg-color);
-		margin-left: 10px;
-		width: 45px;
-		height: 45px;
-		object-fit: cover;
 		border-radius: 50%;
+		box-shadow: 0 0 10px var(--default-fg-color);
+		height: 45px;
+		margin-left: 10px;
+		object-fit: cover;
+		width: 45px;
 	}
 }
-@media (max-width: 350px) {
+
+@media (width <= 350px) {
 	.appbar-body {
 		&-theme {
 			position: absolute;

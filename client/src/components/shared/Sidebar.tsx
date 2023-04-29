@@ -3,7 +3,7 @@ import { useEffect,  useState } from 'preact/hooks';
 import { VscAccount, VscSettings, VscKey } from 'react-icons/vsc';
 import { MdFitnessCenter, MdSearch, MdDangerous } from 'react-icons/md';
 import { SiWelcometothejungle } from 'react-icons/si';
-import { BiInfoCircle } from 'react-icons/bi';
+import { BiInfoCircle, BiLogOutCircle } from 'react-icons/bi';
 
 import ProfileLogo from './../../assets/images/user.png';
 import ThemeSwitch from '../modules/ThemeSwitch';
@@ -35,16 +35,24 @@ const Sidebar = (props: any) => {
 	return(
 		<nav className={`sidebar ${classes.add_border}`} id="sidebar" ref={props.sidebar}>
 			<ul className="sidebar-list">
-			{sidebarRoutes.map((item: any) => {
-				return(
-					<li key={item.id} className="sidebar-list-item">
-						<Link href={`/user${item.path}`} activeClassName='active-sidebar-link'>
-							<item.icon size={24} />
-							<p className="sidebar-list-item-title">{item.name}</p>
-						</Link>
-					</li>
-				)
-			})}
+				{sidebarRoutes.map((item: any) => {
+					return(
+						<li key={item.id} className="sidebar-list-item">
+							<Link href={`/user${item.path}`} activeClassName='active-sidebar-link'>
+								<item.icon size={24} />
+								<p className="sidebar-list-item-title">{item.name}</p>
+							</Link>
+						</li>
+					)
+				})}
+				<li className="sidebar-list-item">
+							<form action="/user/logout" method="POST" className="sidebar-list-item-form">
+								<button type="submit" className="sidebar-list-item-button">
+									<BiLogOutCircle size={24} />
+									<p>Log Off</p>
+								</button>
+							</form>
+						</li>
 			</ul>
 			<ul className="sidebar-profile">
 				<li className="sidebar-profile-item">

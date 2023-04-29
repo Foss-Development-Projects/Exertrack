@@ -3,21 +3,30 @@
 .settings {
 	height: 100%;
 }
+
 .feature-settings-section {
 	height: 100%;
 	overflow: hidden;
 	overflow-y: scroll;
 	@include mix.scrollbar(5px, gray, var(--accent-color-3), 10px);
 }
+
 .feature-settings {
-	display: grid;
-	padding: 10px;
 	align-items: center;
+	display: grid;
+	grid-template-columns: 1fr 50px;
 	justify-content: space-between;
-	grid-template-columns: 1fr 45px;
+	padding: 10px;
+	&-switch {
+		@include mix.add-flex(center, center);
+		background-color: silver;
+		padding: 5px;
+		border-radius: 50px;
+	}
 	&-title {
-		font-size: 18px;
+		font-size: 16px;
 		margin: 0;
+		font-family: "Open Sans", sans-serif;
 		@include mix.add-flex(center, flex-start);
 	}
 }

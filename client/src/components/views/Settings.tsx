@@ -11,15 +11,16 @@ const data: Array<Object> = [
 const Settings = () => {
 	return(
 		<div className="settings">
+		<header className="form-header">Settings</header>
 			<ul className="feature-settings-section">
 				{data.map((item: any, index: number) => {
 					return(
 						<li className="feature-settings" key={index}>
 							<p className="feature-settings-title">
-								<BsDot size={36} />{item.content}
+								<BsDot size={50} />{item.content}
 							</p>
 							<span className="feature-settings-switch">
-								<Switch name={item.name} size="medium" color="success" className="setting-switch" />
+								<Switch name={item.name} size="medium" color="warning" className="setting-switch" />
 							</span>
 						</li>
 					)

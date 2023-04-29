@@ -21,7 +21,6 @@ function ThemeSwitch () {
       localStorage.setItem("dark-mode", "true");
       
       setDarkMode(!darkMode)
-      console.log(darkMode)
     }
     return(
         <MaterialUISwitch checked={ darkMode ? false : true } title='Current Theme' onClick={toggleTheme} />
