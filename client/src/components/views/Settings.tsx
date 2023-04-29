@@ -1,10 +1,14 @@
 import { Switch } from "@mui/material";
-import { BsDot } from 'react-icons/bs';
+import { BsDot, BsGear } from 'react-icons/bs';
 
 
 const data: Array<Object> = [
 	{ name: "notifications", content: "Enable Notifications" },
 	{ name: "public_profile", content: "Make Your Profile Public" },
+	{ name: "workouts", content: "Make Your Workouts Visible" },
+	{ name: "workouts", content: "Make Your Workouts Visible" },
+	{ name: "workouts", content: "Make Your Workouts Visible" },
+	{ name: "workouts", content: "Make Your Workouts Visible" },
 	{ name: "workouts", content: "Make Your Workouts Visible" },
 ]
 
@@ -17,7 +21,7 @@ const Settings = () => {
 					return(
 						<li className="feature-settings" key={index}>
 							<p className="feature-settings-title">
-								<BsDot size={50} />{item.content}
+								<BsGear size={16} className="feature-settings-title-icon" /> {item.content}
 							</p>
 							<span className="feature-settings-switch">
 								<Switch name={item.name} size="medium" color="warning" className="setting-switch" />

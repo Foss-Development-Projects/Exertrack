@@ -1,4 +1,5 @@
 
+import SearchBar from '../modules/SearchBar';
 import UserLogo from './../../assets/images/user.png';
 
 const data : Array<Object> = [
@@ -52,6 +53,7 @@ const data : Array<Object> = [
 const Search = () => {
 	return(
 		<div className="search">
+			<SearchBar />
 			<ul className="search-result-list">
 				{data.map((item: any, index: number) => {
 					return(

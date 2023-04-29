@@ -1,5 +1,7 @@
 @use './../helpers/mixins' as mix;
-
+.workout {
+	font-family: "Open Sans";
+}
 .workout-button {
 	border-radius: 50%;
 	outline: none;
@@ -26,6 +28,12 @@
 }
 .workout-list {
 	margin-top: 10px;
+	position: relative;
+	&-empty {
+		font-size: 22px;
+		font-weight: bold;
+		@include mix.add-flex(center, center);
+	}
 }
 .checkbox {
 	svg path {
@@ -40,8 +48,7 @@
 	box-shadow: 0 0 5px var(--default-fg-color);
 	align-items: center;
 	border-radius: 10px;
-	font-family: "Open Sans";
-	grid-template-columns: 50px 1fr 70px;
+	grid-template-columns: 50px 1fr 80px;
 	margin-bottom: 10px;
 }
 .workout-content {
@@ -65,6 +72,7 @@
 }
 .workout-modify {
 	@include mix.add-flex(center, space-between, row);
+	padding-right: 10px;
 }
 
 .icon {

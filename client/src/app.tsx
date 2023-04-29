@@ -7,6 +7,7 @@ import Register from './components/pages/Register';
 import ForgotPassword from './components/helpers/ForgotPassword';
 import NotFound from './components/helpers/404';
 import PasswordReset from './components/helpers/PasswordReset';
+import Profile from './components/pages/Profile';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Home path="/" />
         <Signin path="/signin" />
         <Register path="/register" />
+        <Profile path="/user/search/profile" />
         <PasswordReset path="/reset-password" />
         <ForgotPassword path="/forgot-password" />
         <Layout path="/user/:rest*" />

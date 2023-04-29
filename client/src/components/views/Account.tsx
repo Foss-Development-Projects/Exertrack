@@ -1,13 +1,18 @@
 import { BsCamera2 } from 'react-icons/bs';
 import { BiUserCircle, BiUser, BiEnvelope } from 'react-icons/bi';
-import { useState } from 'preact/hooks';
+import { useState, useEffect, useRef } from 'preact/hooks';
 import { GiBookAura } from 'react-icons/gi';
 import ProfileLogo from './../../assets/images/user.png';
 const Account = () => {
 	const maxLength = 250;
+	const bioRef: any = useRef(null);
 	const [ charCount, setCharCount ] = useState(0);
+	useEffect(() => {
+		setCharCount(bioRef.current.value.length)
+	}, [])
 	return (
 		<div className="account">
+		<header className="form-header">Settings</header>
 			<section className="account-profile-section">
 				<section className="account-profile-container">
 					<img src={ProfileLogo} alt="User Profile Picture" loading="lazy" />
@@ -22,19 +27,19 @@ const Account = () => {
 					<span className="form-input-icon">
 						<BiUser />
 					</span>
-					<input type='text' name="account_change_fullname" className="form-input-field" placeholder="Change Name" />
+					<input defaultValue="Test User" type='text' name="account_change_fullname" className="form-input-field" placeholder="Name" />
 				</section>
 				<section className="form-input-section">
 					<span className="form-input-icon">
 						<BiUserCircle />
 					</span>
-					<input type='text' name="account_change_username" className="form-input-field" placeholder="Change Username" />
+					<input defaultValue="test0123" type='text' name="account_change_username" className="form-input-field" placeholder="Username" />
 				</section>
 				<section className="form-input-section">
 					<span className="form-input-icon">
 						<BiEnvelope />
 					</span>
-					<input type='text' name="account_change_email" className="form-input-field" placeholder="Change Email" />
+					<input defaultValue="test@test.com" type='text' name="account_change_email" className="form-input-field" placeholder="Email" />
 				</section>
 
 				<section className="form-input-section">
@@ -48,12 +53,14 @@ const Account = () => {
 						<GiBookAura />
 					</span>
 					<textarea 
+						defaultValue="Test user has a bio to show"
 						maxLength={maxLength} 
 						rows={6} 
 						name='account_bio' 
 						type='text' 
 						className='form-textarea-field' 
 						placeholder='Bio' 
+						ref={bioRef}
 						onChange={(e: any) => setCharCount(e.target.value.length)}
 					></textarea>
 				</section>
