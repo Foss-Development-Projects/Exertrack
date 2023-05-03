@@ -22,6 +22,12 @@
 
 @use './components/modules/feature_card';
 @use './components/modules/input_field';
+@use './components/modules/welcome_card';
+
+@use './components/services/motivation-card';
+@use './components/services/weather-card';
+@use './components/services/user-card';
+@use './components/services/datetime-card';
 
 .container {
 	display: grid;

@@ -1,7 +1,7 @@
 const DatetimeCard = () => {
     return (
         <div className="service-card">
-            <p>weather card</p>
+            <p>datetime card</p>
         </div>
     )
 }
