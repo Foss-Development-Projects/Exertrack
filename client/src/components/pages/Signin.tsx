@@ -3,7 +3,7 @@ import { BiUserCircle, BiLockAlt } from 'react-icons/bi'
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
 import Appbar from '../shared/Appbar';
 import { useState } from 'preact/hooks';
-const Signin = () => {
+const Signin = (props: any) => {
 	const [ eye, setEye ] = useState(true);
 	return(
 		<div className="form-container">
@@ -29,7 +29,7 @@ const Signin = () => {
 					<section className="form-submit-section">
 						<button className="form-submit-button" type="submit">Login</button>
 						<Link className="form-submit-link" href="/register">First Time Here ? Register</Link>
-						<Link className="form-submit-link" href="/forgot-password">Forgot Password ? Click Here</Link>
+						<Link className="form-submit-link" href="/forgot-password">Forgot Password ? Reset</Link>
 					</section>
 				</form>
 			</div>

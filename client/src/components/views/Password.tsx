@@ -38,6 +38,9 @@ const Password = () => {
 						{eye3 ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
 					</span>
 				</section>
+				<section className="form-helper-section">
+					<a className="form-submit-link" href="../forgot-password">Forgot Current Password?</a>
+				</section>
 				<section className="form-submit-section">
 					<button className="form-submit-button" type="submit">Update</button>
 				</section>

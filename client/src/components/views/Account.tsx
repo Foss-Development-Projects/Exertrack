@@ -12,7 +12,7 @@ const Account = () => {
 	}, [])
 	return (
 		<div className="account">
-		<header className="form-header">Settings</header>
+		<header className="form-header">Account</header>
 			<section className="account-profile-section">
 				<section className="account-profile-container">
 					<img src={ProfileLogo} alt="User Profile Picture" loading="lazy" />

@@ -5,7 +5,7 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
 import Appbar from '../shared/Appbar';
 import classes from './../../assets/css/reset-password.module.css';
 
-const PasswordReset = () => {
+const PasswordReset = (props: any) => {
 	const [ eye1, setEye1 ] = useState(true);
 	const [ eye2, setEye2 ] = useState(true);
 	return(

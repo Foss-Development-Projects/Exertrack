@@ -4,7 +4,7 @@ import Navbar from "../shared/Navbar"
 import Preview from "../shared/Preview"
 import Sidebar from "../shared/Sidebar"
 
-const Layout = () => {
+const Layout = (props: any) => {
       const sidebarRef = useRef(null);
       return(
             <div className="container">

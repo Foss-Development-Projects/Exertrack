@@ -1,4 +1,4 @@
-const NotFound = () => {
+const NotFound = (props: any) => {
 	return(
 		<div>
 			<h1>404 View</h1>

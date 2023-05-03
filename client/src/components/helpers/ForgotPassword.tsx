@@ -3,7 +3,7 @@ import { BiEnvelope } from 'react-icons/bi'
 import Appbar from '../shared/Appbar';
 import classes from './../../assets/css/forgotpassword.module.css';
 
-const ForgotPassword = () => {
+const ForgotPassword = (props: any) => {
 	return (
 		<div className="form-container">
 			<Appbar />
@@ -17,7 +17,7 @@ const ForgotPassword = () => {
 						<input type="text" className="form-input-field" name="reset_password_email" placeholder="Email" />
 					</section>
 					<section className="form-submit-section">
-						<button className={`form-submit-button ${classes.form_submit_button}`} type="submit">Reset Password</button>
+						<button className={`form-submit-button ${classes.formSubmitButton}`} type="submit">Reset Password</button>
 						<Link className="form-submit-link" href="/">Return To Home</Link>
 					</section>
 				</form>

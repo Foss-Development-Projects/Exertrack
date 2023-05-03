@@ -3,7 +3,7 @@ import { BiUserCircle, BiLockAlt, BiEnvelope, BiUser } from 'react-icons/bi'
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
 import Appbar from '../shared/Appbar';
 import { useState } from 'preact/hooks';
-const Signin = () => {
+const Signin = (props: any) => {
 	const [ eye1, setEye1 ] = useState(true);
 	const [ eye2, setEye2 ] = useState(true);
 	return(

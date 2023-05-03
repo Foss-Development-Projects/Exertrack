@@ -1,6 +1,7 @@
 import { AiOutlineArrowRight, AiFillAccountBook, } from 'react-icons/ai';
-import { BiHappyHeartEyes, BiMoneyWithdraw } from 'react-icons/bi';
-import {  } from 'react-icons/bs';
+import { BiHappyHeartEyes } from 'react-icons/bi';
+import { BsShieldLockFill } from 'react-icons/bs';
+import { MdOutlineMoneyOff, MdOutlineDevices } from 'react-icons/md';
 import HomeBG from './../../assets/images/exertrack-bg.svg';
 import Footer from '../shared/Footer';
 import Appbar from '../shared/Appbar';
@@ -9,27 +10,27 @@ import { Link } from 'preact-router';
 const data: Array<Object> = [
 	{ 
 		title: "Easy To Use", 
-		content: "Setup your exercises the easiest way, with exertrack",
+		content: "Setup your exercises the easiest way, with Exertrack",
 		icon: BiHappyHeartEyes
 	},
 	{ 
-		title: "Title", 
-		content: "kyscraper vehicle j-pop beef noodles carbon towards modem Kowloon monofilament. Car dolphin physical dissident sub-orbital weathered office computer chrome long-chain hydrocarbons ",
-		icon: AiFillAccountBook
+		title: "Fluid", 
+		content: "Responsive As Fluid, From Mobile To Laptop To Desktop",
+		icon: MdOutlineDevices
 	},
 	{ 
-		title: "Title", 
-		content: "kyscraper vehicle j-pop beef noodles carbon towards modem Kowloon monofilament. Car dolphin physical dissident sub-orbital weathered office computer chrome long-chain hydrocarbons ",
-		icon: AiFillAccountBook
+		title: "Secure", 
+		content: "Only You Decide What U Want To Make Visible & What U Want To Keep Private",
+		icon: BsShieldLockFill
 	},
 	{ 
 		title: "Free", 
 		content: "No Need to pay for anything for personal use",
-		icon: BiMoneyWithdraw
+		icon: MdOutlineMoneyOff
 	}
 ]
 
-const Home = () => {
+const Home = (props: any) => {
 	return (
 		<div className="home">
 			<section className="home-title-section" style={{ backgroundImage: `url('${HomeBG}')` }}>

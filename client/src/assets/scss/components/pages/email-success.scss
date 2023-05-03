@@ -1,0 +1,9 @@
+@use './../helpers/mixins' as mix;
+
+.email-success-section {
+    @include mix.add-flex(center, center);
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 20px;
+
+}
