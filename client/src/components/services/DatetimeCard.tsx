@@ -1,14 +1,10 @@
-import { useState } from "preact/hooks";
-
+import { useEffect, useState } from "preact/hooks";
 const DatetimeCard = () => {
-    const date = new Date();
-    const [ time, setTime ] = useState(`${date}`);
-    // const timeInterval = setInterval(() => setTime(date.toLocaleString()), 1000)
-    // clearInterval(timeInterval)
+    const now = new Date();
     return (
         <div className="service-card">
             <div className="datetime-card-container">
-                <header>{time}</header>
+                <header>{now.toLocaleDateString()}</header>
             </div>
         </div>
     )

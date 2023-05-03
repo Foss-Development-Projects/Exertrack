@@ -58,6 +58,24 @@
 	}
 }
 
+@mixin scrollbarx($height: 15px, $bg-color:whitesmoke, $fg-color:darkgray, $rounded:0) {
+	&::-webkit-scrollbar {
+		background-color: $bg-color;
+		border-radius: 10px;
+		height: $height;
+
+		&-thumb {
+			background-color: $fg-color;
+			border-radius: $rounded;
+
+		}
+
+		&-button {
+			display: none;
+		}
+	}
+}
+
 @mixin custom-btn(
 	$bg: var(--default-fg-color), 
 	$fg: var(--default-bg-color), 
