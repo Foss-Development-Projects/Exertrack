@@ -1,5 +1,30 @@
+@use './../helpers/mixins' as mix;
+
+.user-card-container {
+    position: relative;
+    height: 100%;
+}
 .user-card-greeting-header {
     font-size: 20px;
     font-weight: lighter;
     font-family: "Open Sans", sans-serif;
+}
+.user-card-greeting-link-section {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+.user-card-greeting-link {
+    @include mix.add-flex(center, center);
+    text-decoration: none;
+    color: var(--accent-color-4);
+    font-weight: bold;
+    font-size: 14px;
+    font-family: "Montserrat Alternates", monospace;
+    &:hover {
+        text-shadow: 0 0 5px var(--accent-color-4);
+    }
+    span {
+        margin-left: 5px;
+    }
 }
