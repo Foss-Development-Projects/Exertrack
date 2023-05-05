@@ -1,0 +1,32 @@
+@use './../helpers/mixins' as mix;
+
+.datetime-card-container {
+    @include mix.add-flex(flex-start, space-between);
+    font-family: "Lato";
+}
+.datetime-card-current-time {
+    font-size: 36px;
+    font-weight: bold;
+}
+.datetime-card-day {
+    font-size: 22px;
+    font-weight: lighter;
+}
+
+.datetime-calendar {
+    height: 235px;
+    width: 250px!important;
+    overflow: scroll;
+    overflow-x: hidden;
+    background: none!important;
+    border-radius: 5px;
+    @include mix.scrollbar(5px);
+    .react-calendar__navigation {
+        font-size: xx-small;
+    }
+}
+@media (max-width: 600px) {
+    .datetime-card-container {
+        @include mix.add-flex(flex-start, space-between, column);
+    }
+}

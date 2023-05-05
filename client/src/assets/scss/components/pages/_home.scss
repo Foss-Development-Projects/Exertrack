@@ -6,11 +6,7 @@
 }
 
 .home {
-	background-attachment: fixed;
 	background-color: var(--default-bg-color);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
 	min-height: 100vh;
 	position: relative;
 }
@@ -24,6 +20,11 @@
 	margin-bottom: 50px;
 	padding: 0 10px;
 	text-align: center;
+	background-attachment: fixed;
+	background-color: var(--default-bg-color);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 
 	.home-title {
 		color: var(--default-fg-color);

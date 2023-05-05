@@ -44,24 +44,31 @@
 	background-color: var(--default-bg-color);
 	color: var(--default-fg-color);
 	display: grid;
+	grid-template-areas: "workout-checkbox workout-content workout-modify";
 	padding: 5px;
 	box-shadow: 0 0 5px var(--default-fg-color);
 	align-items: center;
 	border-radius: 10px;
-	grid-template-columns: 50px 1fr 80px;
+	grid-template-columns: 50px 1fr 120px;
 	margin-bottom: 10px;
 }
 .workout-content {
+	grid-area: workout-content;
+	display: flex;
+	word-break: break-all;
+	flex-direction: column;
 	&-name {
 		font-weight: bold;
 		margin-bottom: 5px;
-		max-width: 100px;
+		display: flex;
+		align-items: center;
 	}
 	&-duration {
 		font-weight: bold;
 	}
 }
 .workout-checkbox {
+	grid-area: workout-checkbox;
 	background-color: var(--default-bg-color);
 	color: var(--default-fg-color);
 	border-radius: 50%;
@@ -71,6 +78,7 @@
 	@include mix.add-flex(center, center);
 }
 .workout-modify {
+	grid-area: workout-modify;
 	@include mix.add-flex(center, space-between, row);
 	padding-right: 10px;
 }
@@ -100,10 +108,28 @@
 			transition: box-shadow, 200ms ease-in-out;
 		}
 	}
+	&-tick {
+		background-color: green;
+		transition:all 200ms ease-in-out;
+		&:hover {
+			box-shadow: 0 0 5px green;
+			transition: all 200ms ease-in-out;
+		}
+	}
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
+	.workout-list-item {
+		grid-template-areas: 
+			"workout-checkbox workout-modify"
+			"workout-content workout-content"
+		;
+		justify-content: space-between;
+		grid-template-columns: 50px 120px;
+		gap: 10px 0;
+	}
 	.workout-content {
+		margin-left: 10px;
 		font-size: small;
 	}
 }

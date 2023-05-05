@@ -7,7 +7,6 @@ import {
 import { MdWbSunny } from "react-icons/md";
 import { FaCloudSunRain, FaCloudMoonRain, FaWind } from "react-icons/fa";
 import { WiHumidity } from "react-icons/wi";
-import { TiWaves } from "react-icons/ti";
 
 import { useEffect, useState } from "preact/hooks";
 
