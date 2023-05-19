@@ -12,7 +12,7 @@ const data = [
 	{ name: "WorkoutName", time: "4:00 Mins" }
 ]
 
-const Workout = () => {
+const Workout = (props: any) => {
 	const workoutListRef : any = useRef(null);
 	const [ empty, setEmpty ]: any = useState(null)
 	const [ allCheck, setAllCheck ] = useState(false);

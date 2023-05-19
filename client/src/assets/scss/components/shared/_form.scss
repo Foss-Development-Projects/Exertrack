@@ -99,10 +99,13 @@
 		top: 2.5px;
 	}
 }
+
 .form-helper-section {
 	width: 100%;
+
 	@include mix.add-flex(center, flex-start);
 }
+
 .form-submit {
 	&-section {
 		@include mix.add-flex(center, center, column);
@@ -117,12 +120,12 @@
 	}
 
 	&-link {
+		color: yellowgreen;
+		font-family: "Open Sans", sans-serif;
+		font-size: smaller;
 		font-weight: bold;
 		margin-bottom: 5px;
 		text-decoration: none;
-		font-size: smaller;
-		font-family: "Open Sans", sans-serif;
-		color: yellowgreen;
 	}
 }
 

@@ -1,4 +1,4 @@
-const About = () => {
+const About = (props: any) => {
 	return(
 		<div>
 			<header className="form-header">About</header>

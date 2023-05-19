@@ -2,11 +2,13 @@
 
 .email-success-section {
     @include mix.add-flex(center, center);
-    font-size: 14px;
+
     font-family: "Open Sans", sans-serif;
+    font-size: 14px;
     margin-bottom: 20px;
 
 }
+
 .email-success-message {
     margin-right: 1.5px;
 }

@@ -2,86 +2,107 @@
 
 .weather-card-container {
 	@include mix.add-flex(center, space-between, column);
+
 	height: 100%;
 }
+
 .weather-card-header {
-	width: 100%;
-	@include mix.add-flex(flex-start, flex-start, column);
-	padding-right: 5px;
 	font-family: "Open Sans", sans-serif;
+	padding-right: 5px;
+	width: 100%;
+
+	@include mix.add-flex(flex-start, flex-start, column);
+
 	&-top-section {
-		width: 100%;
-		@include mix.add-flex(flex-end, space-between);
 		margin-bottom: 5px;
+		width: 100%;
+
+		@include mix.add-flex(flex-end, space-between);
 	}
+
 	&-lower-top-section {
-		width: 100%;
-		@include mix.add-flex(flex-end, space-between);
 		margin-bottom: 5px;
+		width: 100%;
+
+		@include mix.add-flex(flex-end, space-between);
+
 		.weather-card-header-current-area-indicator {
 			font-weight: bold;
 			margin-left: 2.5px;
 		}
 	}
+
 	&-middle-section {
-		width: 100%;
 		margin-left: 5px;
+		width: 100%;
+
 		@include mix.add-flex(center, flex-start);
+
 		p {
 			margin-left: 5px;
 		}
 	}
+
 	&-bottom-section {
 		width: 100%;
+
 		@include mix.add-flex(center, flex-start);
 	}
 }
+
 .weather-card-temperature {
+	font-family: Lato, sans-serif;
 	font-size: 40px;
-	font-family: "Lato", sans-serif;
 }
+
 .weather-card-future-section {
-	width: 100%;
+	display: grid;
+	font-family: Lato, sans-serif;
+	font-size: 18px;
+	gap: 10px;
+	grid-template-columns: repeat(7, 85px);
 	max-width: 500px;
+	overflow: hidden;
+	overflow-x: scroll;
+	padding: 5px;
+	width: 100%;
+
 	@include mix.scrollbarx(
 		5px,
 		var(--default-bg-color),
 		var(--default-fg-color)
 	);
-	display: grid;
-	gap: 10px;
-	grid-template-columns: repeat(7, 85px);
-	font-size: 18px;
-	font-family: "Lato", sans-serif;
-	overflow: hidden;
-	padding: 5px;
-	overflow-x: scroll;
 }
+
 .weather-card-future-status {
-	width: 100%;
-	height: 100px;
 	border-radius: 10px;
-	padding: 5px;
 	color: var(--default-fg-color);
-	@include mix.add-flex(center, space-between, column);
+	height: 100px;
+	padding: 5px;
 	position: relative;
+	width: 100%;
 	z-index: 1;
+
+	@include mix.add-flex(center, space-between, column);
+
 	&::after {
-		content: "";
-		height: 100%;
-		width: 100%;
-		display: block;
-		border-radius: 10px;
 		background-color: var(--default-bg-color);
+		border-radius: 10px;
+		content: "";
+		display: block;
+		height: 100%;
+		left: 0;
 		position: absolute;
 		top: 0;
-		left: 0;
+		width: 100%;
 		z-index: -1;
 	}
 }
+
 .weather-card-future-temperature {
 	text-align: center;
 }
+
 .weather-card-future-status-day {
 	font-size: medium;
 	text-align: center;

@@ -5,7 +5,7 @@ import {
 	BsFillCloudLightningRainFill,
 } from "react-icons/bs";
 import { MdWbSunny } from "react-icons/md";
-import { FaCloudSunRain, FaCloudMoonRain, FaWind } from "react-icons/fa";
+import { FaCloudSunRain, FaCloudMoonRain, FaWind, FaLocationArrow } from "react-icons/fa";
 import { WiHumidity } from "react-icons/wi";
 
 import { useEffect, useState } from "preact/hooks";
@@ -19,7 +19,7 @@ const data = [
 	{ temp: "27", day: "Tuesday", icon: FaCloudMoonRain },
 ];
 
-const WeatherCard = () => {
+const WeatherCard = (props: any) => {
 	const temperature = 38;
 	const [tempColor, setTempColor] = useState("");
 	useEffect(() => {

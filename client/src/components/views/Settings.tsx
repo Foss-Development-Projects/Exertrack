@@ -12,7 +12,7 @@ const data: Array<Object> = [
 	{ name: "workouts", content: "Make Your Workouts Visible" },
 ]
 
-const Settings = () => {
+const Settings = (props: any) => {
 	return(
 		<div className="settings">
 		<header className="form-header">Settings</header>

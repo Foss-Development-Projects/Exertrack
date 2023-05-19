@@ -8,6 +8,7 @@
 	height: calc(100% - 60px);
 	overflow: hidden;
 	overflow-y: scroll;
+
 	@include mix.scrollbar(5px, gray, var(--accent-color-3), 10px);
 }
 
@@ -17,17 +18,22 @@
 	grid-template-columns: 1fr 50px;
 	justify-content: space-between;
 	padding: 10px;
+
 	&-switch {
 		@include mix.add-flex(center, center);
+
 		background-color: silver;
-		padding: 5px;
 		border-radius: 50px;
+		padding: 5px;
 	}
+
 	&-title {
+		font-family: "Open Sans", sans-serif;
 		font-size: 16px;
 		margin: 0;
-		font-family: "Open Sans", sans-serif;
+
 		@include mix.add-flex(center, flex-start);
+
 		&-icon {
 			margin-right: 5px;
 		}

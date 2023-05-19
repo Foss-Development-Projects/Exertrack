@@ -3,7 +3,7 @@ import { BiUserCircle, BiUser, BiEnvelope } from 'react-icons/bi';
 import { useState, useEffect, useRef } from 'preact/hooks';
 import { GiBookAura } from 'react-icons/gi';
 import ProfileLogo from './../../assets/images/user.png';
-const Account = () => {
+const Account = (props: any) => {
 	const maxLength = 250;
 	const bioRef: any = useRef(null);
 	const [ charCount, setCharCount ] = useState(0);

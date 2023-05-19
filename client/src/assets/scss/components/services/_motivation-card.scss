@@ -1,25 +1,26 @@
 @use './../helpers/mixins' as mix;
 
 .motivational-quote-container {
-    width: 100%;
     display: grid;
-    grid-template-columns: 1fr;
     font-family: "Roboto Sans", sans-serif;
+    grid-template-columns: 1fr;
+    width: 100%;
 
 }
 
 .motivation-card {
     &-author {
-        text-align: right;
-        font-weight: bolder;
-        font-size: large;
-        margin-right: 10px;
         color: var(--accent-color-5);
+        font-size: large;
+        font-weight: bolder;
+        margin-right: 10px;
+        text-align: right;
     }
+
     &-header {
+        color: var(--accent-color-7);
         font-size: 18px;
         font-weight: lighter;
         margin-bottom: 10px;
-        color: var(--accent-color-7);
     }
 }

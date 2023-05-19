@@ -11,7 +11,7 @@ import MorningBG from './../../assets/images/morning.jpg';
 import MoonLogo from './../../assets/images/moon.png';
 import SunLogo from './../../assets/images/sun.png';
 
-const Welcome = () => {
+const Welcome = (props: any) => {
 	return(
 		<div className="welcome" style={{ backgroundImage: `url('${MorningBG}')` }}>
 			<WeatherCard />

@@ -50,7 +50,7 @@ const data : Array<Object> = [
 	 }
 ] 
 
-const Search = () => {
+const Search = (props: any) => {
 	return(
 		<div className="search">
 			<SearchBar />

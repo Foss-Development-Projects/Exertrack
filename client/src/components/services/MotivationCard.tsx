@@ -1,4 +1,4 @@
-const MotivationCard = () => {
+const MotivationCard = (props: any) => {
     return (
         <div className="service-card">
             <div className="motivational-quote-container">

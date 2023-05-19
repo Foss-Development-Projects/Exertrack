@@ -1,16 +1,17 @@
 @use './../modules/welcome_card';
 @use './../helpers/mixins' as mix;
+
 .welcome {
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	border-radius: 10px;
-	height: 100%;
 	display: grid;
+	gap: 5px;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(2, 1fr);
-	gap: 5px;
+	height: 100%;
 	padding: 5px;
 }
 
@@ -36,12 +37,13 @@
 	width: 50px;
 }
 
-@media (max-width: 1000px) {
+@media (width <= 1000px) {
 	.welcome {
-		overflow: hidden;
-		overflow-y: scroll;
 		display: block;
 		height: calc(100vh - 100px);
+		overflow: hidden;
+		overflow-y: scroll;
+
 		@include mix.scrollbar(5px, var(--default-fg-color), var(--default-bg-color), 5px);
 	}
 }

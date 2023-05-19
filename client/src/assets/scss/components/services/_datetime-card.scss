@@ -2,30 +2,47 @@
 
 .datetime-card-container {
     @include mix.add-flex(flex-start, space-between);
-    font-family: "Lato";
+
+    font-family: Lato;
 }
+
 .datetime-card-current-time {
     font-size: 36px;
     font-weight: bold;
 }
+
 .datetime-card-day {
     font-size: 22px;
     font-weight: lighter;
 }
 
 .datetime-calendar {
-    height: 235px;
-    width: 250px!important;
-    overflow: scroll;
-    overflow-x: hidden;
     background: none!important;
     border-radius: 5px;
+    height: 235px;
+    overflow: scroll;
+    overflow-x: hidden;
+    width: 250px!important;
+    font-family: Lato;
+    color: white;
+
     @include mix.scrollbar(5px);
+
     .react-calendar__navigation {
-        font-size: xx-small;
+        display: grid;
+        grid-template-columns: 15px 15px 1fr 15px 15px;
+        button {
+            background: none;
+            outline: none;
+            border: none;
+            background-color: darkolivegreen;
+            padding: 5px;
+            font-family: "FontAwesome";
+        }
     }
 }
-@media (max-width: 600px) {
+
+@media (width <= 600px) {
     .datetime-card-container {
         @include mix.add-flex(flex-start, space-between, column);
     }

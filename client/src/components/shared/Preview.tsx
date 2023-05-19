@@ -10,7 +10,7 @@ import Welcome from '../views/Welcome';
 
 import classes from './../../assets/css/border.module.css';
 import Password from '../views/Password';
-
+ import Profile from '../pages/Profile';
 const Preview = () => {
 	return(
 		<div className={`preview ${classes.add_border}`}>
@@ -24,6 +24,7 @@ const Preview = () => {
 				<About path="/user/about" />
 				<Danger path="/user/danger" />
 				<Workout path="/user/workouts" />
+				<Profile path="/user/search/profile" />
 			</Router>
 		</div>
 	)

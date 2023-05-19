@@ -1,7 +1,7 @@
 import { useState } from 'preact/hooks'
 import { Checkbox, Button, FormControlLabel } from "@mui/material";
 import ProfileLogo from './../../assets/images/user.png';
-const Danger = () => {
+const Danger = (props: any) => {
 	const [ check, setCheck ] = useState(false);
 	return(
 		<div className="danger">

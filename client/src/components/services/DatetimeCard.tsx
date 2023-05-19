@@ -1,7 +1,8 @@
 import { useEffect, useState } from "preact/hooks";
 import Calendar from 'react-calendar'
-import 'react-calendar/dist/Calendar.css';
-const DatetimeCard = () => {
+import { BiUser } from 'react-icons/bi';
+// import 'react-calendar/dist/Calendar.css';
+const DatetimeCard = (props: any) => {
     return (
         <div className="service-card">
             <div className="datetime-card-container">
@@ -10,7 +11,7 @@ const DatetimeCard = () => {
                     <p className="datetime-card-day">Wed, 5 May, 2023</p>
                 </section>
                 <section className="datetime-calender-section">
-                    <Calendar className="datetime-calendar" />
+                    <Calendar nextLabel="" className="datetime-calendar" />
                 </section>
             </div>
         </div>

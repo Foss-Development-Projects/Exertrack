@@ -1,5 +1,5 @@
 import { BsArrowRight } from 'react-icons/bs'
-const UserCard = () => {
+const UserCard = (props: any) => {
     return (
         <div className="service-card">
             <div className="user-card-container">

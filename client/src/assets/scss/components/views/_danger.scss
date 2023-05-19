@@ -1,32 +1,42 @@
 @use './../helpers/mixins' as mix;
 
 .danger {
+	height: 100%;
 	overflow: hidden;
 	overflow-y: scroll;
-	height: 100%;
+
 	@include mix.scrollbar(5px, gray, var(--accent-color-3), 10px);
 }
+
 .danger-zone {
 	&-button-section {
 		@include mix.add-flex(center, center, column);
+
 		font-family: "Open sans", sans-serif;
+
 		.danger-warning {
 			color: orangered;
 			text-align: center;
 		}
 	}
+
 	&-profile-section {
 		@include mix.add-flex(center, center);
+
 		margin-bottom: 15px;
+
 		img {
 			@include mix.profile-image(150px);
 		}
 	}
 }
+
 .danger-delete-button {
 	&:disabled {
 		@include mix.custom-btn(gray , silver, transparent, 15px, auto, 100px);
+
 		cursor: not-allowed;
 	} 
+
 	@include mix.custom-btn(linear-gradient(45deg, red, orangered) , white, orangered, 15px, auto, 100px);
 }

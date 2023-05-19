@@ -1,116 +1,139 @@
 @use './../helpers/mixins' as mix;
+
 .workout {
 	font-family: "Open Sans";
 }
+
 .workout-button {
-	border-radius: 50%;
-	outline: none;
 	border: none;
+	border-radius: 50%;
 	color: white;
-	padding: 5px;
 	cursor: pointer;
+	outline: none;
+	padding: 5px;
 }
+
 .workout-toolbar {
-	display: grid;
 	align-items: center;
+	background-color: var(--accent-color-6);
+	border-radius: 10px;
+	display: grid;
 	gap: 10px;
 	grid-template-columns: 35px 1fr auto;
 	justify-content: space-between;
-	background-color: var(--accent-color-6);
-	border-radius: 10px;
 	padding: 5px;
+
 	&-button-section {
 		display: grid;
 		gap: 10px;
-		padding: 0 5px;
 		grid-template-columns: repeat(2, 40px);
+		padding: 0 5px;
 	}
 }
+
 .workout-list {
 	margin-top: 10px;
 	position: relative;
+
 	&-empty {
 		font-size: 22px;
 		font-weight: bold;
+
 		@include mix.add-flex(center, center);
 	}
 }
+
 .checkbox {
 	svg path {
 		fill: var(--default-fg-color);
 	}
 }
+
 .workout-list-item {
+	align-items: center;
 	background-color: var(--default-bg-color);
+	border-radius: 10px;
+	box-shadow: 0 0 5px var(--default-fg-color);
 	color: var(--default-fg-color);
 	display: grid;
 	grid-template-areas: "workout-checkbox workout-content workout-modify";
-	padding: 5px;
-	box-shadow: 0 0 5px var(--default-fg-color);
-	align-items: center;
-	border-radius: 10px;
 	grid-template-columns: 50px 1fr 120px;
 	margin-bottom: 10px;
+	padding: 5px;
 }
+
 .workout-content {
-	grid-area: workout-content;
 	display: flex;
-	word-break: break-all;
 	flex-direction: column;
+	grid-area: workout-content;
+	word-break: break-all;
+
 	&-name {
+		align-items: center;
+		display: flex;
 		font-weight: bold;
 		margin-bottom: 5px;
-		display: flex;
-		align-items: center;
 	}
+
 	&-duration {
 		font-weight: bold;
 	}
 }
+
 .workout-checkbox {
-	grid-area: workout-checkbox;
 	background-color: var(--default-bg-color);
-	color: var(--default-fg-color);
 	border-radius: 50%;
-	width: 30px;
+	color: var(--default-fg-color);
+	grid-area: workout-checkbox;
 	height: 30px;
 	margin-left: 5px;
+	width: 30px;
+
 	@include mix.add-flex(center, center);
 }
+
 .workout-modify {
 	grid-area: workout-modify;
-	@include mix.add-flex(center, space-between, row);
 	padding-right: 10px;
+
+	@include mix.add-flex(center, space-between, row);
 }
 
 .icon {
 	&-delete {
 		background-color: orangered;
 		transition: box-shadow, 200ms ease-in-out;
+
 		&:hover {
 			box-shadow: 0 0 5px orangered;
 			transition: box-shadow, 200ms ease-in-out;
 		}
 	}
+
 	&-add {
 		background-color: lightgreen;
 		transition: box-shadow, 200ms ease-in-out;
+
 		&:hover {
 			box-shadow: 0 0 5px lightgreen;
 			transition: box-shadow, 200ms ease-in-out;
 		}
 	}
+
 	&-edit {
 		background-color: goldenrod;
 		transition: box-shadow, 200ms ease-in-out;
+
 		&:hover {
 			box-shadow: 0 0 5px goldenrod;
 			transition: box-shadow, 200ms ease-in-out;
 		}
 	}
+
 	&-tick {
 		background-color: green;
 		transition:all 200ms ease-in-out;
+
 		&:hover {
 			box-shadow: 0 0 5px green;
 			transition: all 200ms ease-in-out;
@@ -118,18 +141,19 @@
 	}
 }
 
-@media (max-width: 500px) {
+@media (width <= 500px) {
 	.workout-list-item {
+		gap: 10px 0;
 		grid-template-areas: 
 			"workout-checkbox workout-modify"
 			"workout-content workout-content"
 		;
-		justify-content: space-between;
 		grid-template-columns: 50px 120px;
-		gap: 10px 0;
+		justify-content: space-between;
 	}
+
 	.workout-content {
-		margin-left: 10px;
 		font-size: small;
+		margin-left: 10px;
 	}
 }

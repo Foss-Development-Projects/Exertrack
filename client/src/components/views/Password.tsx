@@ -2,7 +2,7 @@ import { BiLockAlt } from 'react-icons/bi'
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
 import { useState } from 'preact/hooks';
 
-const Password = () => {
+const Password = (props: any) => {
 	const [eye1, setEye1] = useState(true);
 	const [eye2, setEye2] = useState(true);
 	const [eye3, setEye3] = useState(true);

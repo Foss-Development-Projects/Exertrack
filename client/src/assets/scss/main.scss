@@ -6,7 +6,6 @@
 @use './components/shared/footer';
 @use './components/shared/preview';
 @use './components/shared/form';
-
 @use './components/views/about';
 @use './components/views/workout';
 @use './components/views/search';
@@ -15,15 +14,12 @@
 @use './components/views/password';
 @use './components/views/settings';
 @use './components/views/danger';
-
 @use './components/pages/home';
 @use './components/pages/login';
 @use './components/pages/register';
-
 @use './components/modules/feature_card';
 @use './components/modules/input_field';
 @use './components/modules/welcome_card';
-
 @use './components/services/motivation-card';
 @use './components/services/weather-card';
 @use './components/services/user-card';
