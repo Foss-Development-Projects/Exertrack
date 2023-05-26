@@ -33,7 +33,7 @@ const data: Array<Object> = [
 const Home = (props: any) => {
 	return (
 		<div className="home">
-			<section className="home-title-section" style={{ backgroundImage: `url('${HomeBG}')` }}>
+			<section className="home-title-section">
 				<Appbar />
 				<h1 className="home-title">Exertrack</h1>
 				<p className="home-intro">Best App To Track Your Workout Progress</p>

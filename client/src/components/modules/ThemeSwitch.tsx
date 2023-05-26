@@ -8,11 +8,11 @@ function ThemeSwitch () {
       let theme = localStorage.getItem("dark-mode")
       if(theme === "true") {
         setDarkMode(true) 
-        ThemeStyle("rgba(0,0,0,0.85)", "rgba(255,255,255,0.85)");
+        ThemeStyle("rgba(0,0,0,0.65)", "rgba(255,255,255,0.85)");
       }
       else {
         setDarkMode(false) 
-        ThemeStyle("rgba(255,255,255,0.75)", "rgba(0,0,0,0.85)");
+        ThemeStyle("rgba(255,255,255,0.75)", "rgba(0,0,0,0.65)");
       }
     }, [darkMode])
     const toggleTheme = () => {
