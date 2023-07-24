@@ -11,7 +11,7 @@ const DatetimeCard = (props: any) => {
                     <p className="datetime-card-day">Wed, 5 May, 2023</p>
                 </section>
                 <section className="datetime-calender-section">
-                    <Calendar nextLabel="" className="datetime-calendar" />
+                    <Calendar className="datetime-calendar" />
                 </section>
             </div>
         </div>
